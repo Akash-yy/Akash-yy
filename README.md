@@ -7,7 +7,7 @@
       <p align="left">
         Welcome to my GitHub profile! 😃
         <br> <br>
-        I'm a passionate Cloud Engineer and Database Admin with 2.9 YOE as of April 2026 years of experience crafting scalable, efficient, and resilient cloud infrastructures. 
+        I'm a passionate Cloud Engineer and Database Admin with 2.9 YOE as of April 2026 crafting scalable, efficient, and resilient cloud infrastructures. 
         I thrive on solving complex problems and turning ideas into powerful cloud solutions. 
           Whether it's Cloud Engineering or Databases, I'm always pushing the boundaries of what's possible. 
         <br> <br>
