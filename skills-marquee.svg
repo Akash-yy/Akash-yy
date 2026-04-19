@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="90" viewBox="0 0 800 90">
+<defs>
+  <linearGradient id="fadeL" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0%" stop-color="#0d1117"/>
+    <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="fadeR" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0%" stop-color="#0d1117" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#0d1117"/>
+  </linearGradient>
+</defs>
+
+<rect width="800" height="90" fill="#0d1117" rx="6"/>
+
+<g>
+  <animateTransform attributeName="transform" type="translate"
+    from="0,0" to="-1400,0" dur="24s" repeatCount="indefinite"/>
+
+  <!-- ═══ SET 1 ═══ -->
+
+  <!-- Terraform x=9 -->
+  <rect x="9" y="8" width="82" height="70" rx="7" fill="#0D0020" stroke="#7B42BC" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="9" y="8" width="82" height="2.5" rx="1.5" fill="#7B42BC"/>
+  <circle cx="50" cy="33" r="11" fill="#7B42BC" fill-opacity="0.18" stroke="#7B42BC" stroke-width="0.7"/>
+  <text x="50" y="37" text-anchor="middle" fill="#7B42BC" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">TF</text>
+  <text x="50" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Terraform</text>
+  <text x="50" y="70" text-anchor="middle" fill="#7B42BC" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">IaC · Modules</text>
+
+  <!-- GitHub Actions x=109 -->
+  <rect x="109" y="8" width="82" height="70" rx="7" fill="#001428" stroke="#2088FF" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="109" y="8" width="82" height="2.5" rx="1.5" fill="#2088FF"/>
+  <circle cx="150" cy="33" r="11" fill="#2088FF" fill-opacity="0.18" stroke="#2088FF" stroke-width="0.7"/>
+  <text x="150" y="37" text-anchor="middle" fill="#2088FF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GHA</text>
+  <text x="150" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GH Actions</text>
+  <text x="150" y="70" text-anchor="middle" fill="#2088FF" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">CI/CD</text>
+
+  <!-- OCI x=209 -->
+  <rect x="209" y="8" width="82" height="70" rx="7" fill="#1A0000" stroke="#F04020" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="209" y="8" width="82" height="2.5" rx="1.5" fill="#F04020"/>
+  <circle cx="250" cy="33" r="11" fill="#F04020" fill-opacity="0.18" stroke="#F04020" stroke-width="0.7"/>
+  <text x="250" y="37" text-anchor="middle" fill="#F04020" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">OCI</text>
+  <text x="250" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">OCI</text>
+  <text x="250" y="70" text-anchor="middle" fill="#F04020" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Hub &amp; Spoke</text>
+
+  <!-- AWS x=309 -->
+  <rect x="309" y="8" width="82" height="70" rx="7" fill="#1A0D00" stroke="#FF9900" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="309" y="8" width="82" height="2.5" rx="1.5" fill="#FF9900"/>
+  <circle cx="350" cy="33" r="11" fill="#FF9900" fill-opacity="0.18" stroke="#FF9900" stroke-width="0.7"/>
+  <text x="350" y="37" text-anchor="middle" fill="#FF9900" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">AWS</text>
+  <text x="350" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">AWS</text>
+  <text x="350" y="70" text-anchor="middle" fill="#FF9900" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">EC2·VPC·RDS</text>
+
+  <!-- GCP x=409 -->
+  <rect x="409" y="8" width="82" height="70" rx="7" fill="#00081A" stroke="#4285F4" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="409" y="8" width="82" height="2.5" rx="1.5" fill="#4285F4"/>
+  <circle cx="450" cy="33" r="11" fill="#4285F4" fill-opacity="0.18" stroke="#4285F4" stroke-width="0.7"/>
+  <text x="450" y="37" text-anchor="middle" fill="#4285F4" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GCP</text>
+  <text x="450" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GCP</text>
+  <text x="450" y="70" text-anchor="middle" fill="#4285F4" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Multicloud</text>
+
+  <!-- Oracle DB x=509 -->
+  <rect x="509" y="8" width="82" height="70" rx="7" fill="#1A0500" stroke="#C74634" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="509" y="8" width="82" height="2.5" rx="1.5" fill="#C74634"/>
+  <circle cx="550" cy="33" r="11" fill="#C74634" fill-opacity="0.18" stroke="#C74634" stroke-width="0.7"/>
+  <text x="550" y="37" text-anchor="middle" fill="#C74634" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">ORA</text>
+  <text x="550" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Oracle DB</text>
+  <text x="550" y="70" text-anchor="middle" fill="#C74634" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">19c · EBS</text>
+
+  <!-- Exadata x=609 -->
+  <rect x="609" y="8" width="82" height="70" rx="7" fill="#1A0000" stroke="#FF3333" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="609" y="8" width="82" height="2.5" rx="1.5" fill="#FF3333"/>
+  <circle cx="650" cy="33" r="11" fill="#FF3333" fill-opacity="0.18" stroke="#FF3333" stroke-width="0.7"/>
+  <text x="650" y="37" text-anchor="middle" fill="#FF3333" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">EXA</text>
+  <text x="650" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Exadata</text>
+  <text x="650" y="70" text-anchor="middle" fill="#FF3333" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">@GCP</text>
+
+  <!-- Linux x=709 -->
+  <rect x="709" y="8" width="82" height="70" rx="7" fill="#1A1400" stroke="#FCC624" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="709" y="8" width="82" height="2.5" rx="1.5" fill="#FCC624"/>
+  <circle cx="750" cy="33" r="11" fill="#FCC624" fill-opacity="0.18" stroke="#FCC624" stroke-width="0.7"/>
+  <text x="750" y="37" text-anchor="middle" fill="#FCC624" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">LNX</text>
+  <text x="750" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Linux</text>
+  <text x="750" y="70" text-anchor="middle" fill="#FCC624" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Admin</text>
+
+  <!-- Bash x=809 -->
+  <rect x="809" y="8" width="82" height="70" rx="7" fill="#001A00" stroke="#4EAA25" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="809" y="8" width="82" height="2.5" rx="1.5" fill="#4EAA25"/>
+  <circle cx="850" cy="33" r="11" fill="#4EAA25" fill-opacity="0.18" stroke="#4EAA25" stroke-width="0.7"/>
+  <text x="850" y="37" text-anchor="middle" fill="#4EAA25" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">SH</text>
+  <text x="850" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Bash</text>
+  <text x="850" y="70" text-anchor="middle" fill="#4EAA25" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Scripting</text>
+
+  <!-- IAM x=909 -->
+  <rect x="909" y="8" width="82" height="70" rx="7" fill="#1A000A" stroke="#DD344C" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="909" y="8" width="82" height="2.5" rx="1.5" fill="#DD344C"/>
+  <circle cx="950" cy="33" r="11" fill="#DD344C" fill-opacity="0.18" stroke="#DD344C" stroke-width="0.7"/>
+  <text x="950" y="37" text-anchor="middle" fill="#DD344C" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">IAM</text>
+  <text x="950" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">IAM</text>
+  <text x="950" y="70" text-anchor="middle" fill="#DD344C" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Policies</text>
+
+  <!-- VCN x=1009 -->
+  <rect x="1009" y="8" width="82" height="70" rx="7" fill="#000A1A" stroke="#3399FF" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1009" y="8" width="82" height="2.5" rx="1.5" fill="#3399FF"/>
+  <circle cx="1050" cy="33" r="11" fill="#3399FF" fill-opacity="0.18" stroke="#3399FF" stroke-width="0.7"/>
+  <text x="1050" y="37" text-anchor="middle" fill="#3399FF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">VCN</text>
+  <text x="1050" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">VCN</text>
+  <text x="1050" y="70" text-anchor="middle" fill="#3399FF" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Networking</text>
+
+  <!-- DRG x=1109 -->
+  <rect x="1109" y="8" width="82" height="70" rx="7" fill="#001020" stroke="#44AAFF" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1109" y="8" width="82" height="2.5" rx="1.5" fill="#44AAFF"/>
+  <circle cx="1150" cy="33" r="11" fill="#44AAFF" fill-opacity="0.18" stroke="#44AAFF" stroke-width="0.7"/>
+  <text x="1150" y="37" text-anchor="middle" fill="#44AAFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">DRG</text>
+  <text x="1150" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">DRG</text>
+  <text x="1150" y="70" text-anchor="middle" fill="#44AAFF" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Routing</text>
+
+  <!-- RMAN x=1209 -->
+  <rect x="1209" y="8" width="82" height="70" rx="7" fill="#1A0800" stroke="#FF6B35" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1209" y="8" width="82" height="2.5" rx="1.5" fill="#FF6B35"/>
+  <circle cx="1250" cy="33" r="11" fill="#FF6B35" fill-opacity="0.18" stroke="#FF6B35" stroke-width="0.7"/>
+  <text x="1250" y="37" text-anchor="middle" fill="#FF6B35" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">RMAN</text>
+  <text x="1250" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">RMAN</text>
+  <text x="1250" y="70" text-anchor="middle" fill="#FF6B35" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Backup</text>
+
+  <!-- Data Guard x=1309 -->
+  <rect x="1309" y="8" width="82" height="70" rx="7" fill="#001A18" stroke="#00C7B7" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1309" y="8" width="82" height="2.5" rx="1.5" fill="#00C7B7"/>
+  <circle cx="1350" cy="33" r="11" fill="#00C7B7" fill-opacity="0.18" stroke="#00C7B7" stroke-width="0.7"/>
+  <text x="1350" y="37" text-anchor="middle" fill="#00C7B7" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">DG</text>
+  <text x="1350" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Data Guard</text>
+  <text x="1350" y="70" text-anchor="middle" fill="#00C7B7" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">HA/DR</text>
+
+  <!-- ═══ SET 2 (duplicate, offset +1400) ═══ -->
+
+  <!-- Terraform x=1409 -->
+  <rect x="1409" y="8" width="82" height="70" rx="7" fill="#0D0020" stroke="#7B42BC" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1409" y="8" width="82" height="2.5" rx="1.5" fill="#7B42BC"/>
+  <circle cx="1450" cy="33" r="11" fill="#7B42BC" fill-opacity="0.18" stroke="#7B42BC" stroke-width="0.7"/>
+  <text x="1450" y="37" text-anchor="middle" fill="#7B42BC" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">TF</text>
+  <text x="1450" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Terraform</text>
+  <text x="1450" y="70" text-anchor="middle" fill="#7B42BC" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">IaC · Modules</text>
+
+  <!-- GitHub Actions x=1509 -->
+  <rect x="1509" y="8" width="82" height="70" rx="7" fill="#001428" stroke="#2088FF" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1509" y="8" width="82" height="2.5" rx="1.5" fill="#2088FF"/>
+  <circle cx="1550" cy="33" r="11" fill="#2088FF" fill-opacity="0.18" stroke="#2088FF" stroke-width="0.7"/>
+  <text x="1550" y="37" text-anchor="middle" fill="#2088FF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GHA</text>
+  <text x="1550" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GH Actions</text>
+  <text x="1550" y="70" text-anchor="middle" fill="#2088FF" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">CI/CD</text>
+
+  <!-- OCI x=1609 -->
+  <rect x="1609" y="8" width="82" height="70" rx="7" fill="#1A0000" stroke="#F04020" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1609" y="8" width="82" height="2.5" rx="1.5" fill="#F04020"/>
+  <circle cx="1650" cy="33" r="11" fill="#F04020" fill-opacity="0.18" stroke="#F04020" stroke-width="0.7"/>
+  <text x="1650" y="37" text-anchor="middle" fill="#F04020" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">OCI</text>
+  <text x="1650" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">OCI</text>
+  <text x="1650" y="70" text-anchor="middle" fill="#F04020" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Hub &amp; Spoke</text>
+
+  <!-- AWS x=1709 -->
+  <rect x="1709" y="8" width="82" height="70" rx="7" fill="#1A0D00" stroke="#FF9900" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1709" y="8" width="82" height="2.5" rx="1.5" fill="#FF9900"/>
+  <circle cx="1750" cy="33" r="11" fill="#FF9900" fill-opacity="0.18" stroke="#FF9900" stroke-width="0.7"/>
+  <text x="1750" y="37" text-anchor="middle" fill="#FF9900" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">AWS</text>
+  <text x="1750" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">AWS</text>
+  <text x="1750" y="70" text-anchor="middle" fill="#FF9900" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">EC2·VPC·RDS</text>
+
+  <!-- GCP x=1809 -->
+  <rect x="1809" y="8" width="82" height="70" rx="7" fill="#00081A" stroke="#4285F4" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1809" y="8" width="82" height="2.5" rx="1.5" fill="#4285F4"/>
+  <circle cx="1850" cy="33" r="11" fill="#4285F4" fill-opacity="0.18" stroke="#4285F4" stroke-width="0.7"/>
+  <text x="1850" y="37" text-anchor="middle" fill="#4285F4" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GCP</text>
+  <text x="1850" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">GCP</text>
+  <text x="1850" y="70" text-anchor="middle" fill="#4285F4" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Multicloud</text>
+
+  <!-- Oracle DB x=1909 -->
+  <rect x="1909" y="8" width="82" height="70" rx="7" fill="#1A0500" stroke="#C74634" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="1909" y="8" width="82" height="2.5" rx="1.5" fill="#C74634"/>
+  <circle cx="1950" cy="33" r="11" fill="#C74634" fill-opacity="0.18" stroke="#C74634" stroke-width="0.7"/>
+  <text x="1950" y="37" text-anchor="middle" fill="#C74634" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">ORA</text>
+  <text x="1950" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Oracle DB</text>
+  <text x="1950" y="70" text-anchor="middle" fill="#C74634" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">19c · EBS</text>
+
+  <!-- Exadata x=2009 -->
+  <rect x="2009" y="8" width="82" height="70" rx="7" fill="#1A0000" stroke="#FF3333" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2009" y="8" width="82" height="2.5" rx="1.5" fill="#FF3333"/>
+  <circle cx="2050" cy="33" r="11" fill="#FF3333" fill-opacity="0.18" stroke="#FF3333" stroke-width="0.7"/>
+  <text x="2050" y="37" text-anchor="middle" fill="#FF3333" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">EXA</text>
+  <text x="2050" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Exadata</text>
+  <text x="2050" y="70" text-anchor="middle" fill="#FF3333" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">@GCP</text>
+
+  <!-- Linux x=2109 -->
+  <rect x="2109" y="8" width="82" height="70" rx="7" fill="#1A1400" stroke="#FCC624" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2109" y="8" width="82" height="2.5" rx="1.5" fill="#FCC624"/>
+  <circle cx="2150" cy="33" r="11" fill="#FCC624" fill-opacity="0.18" stroke="#FCC624" stroke-width="0.7"/>
+  <text x="2150" y="37" text-anchor="middle" fill="#FCC624" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">LNX</text>
+  <text x="2150" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Linux</text>
+  <text x="2150" y="70" text-anchor="middle" fill="#FCC624" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Admin</text>
+
+  <!-- Bash x=2209 -->
+  <rect x="2209" y="8" width="82" height="70" rx="7" fill="#001A00" stroke="#4EAA25" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2209" y="8" width="82" height="2.5" rx="1.5" fill="#4EAA25"/>
+  <circle cx="2250" cy="33" r="11" fill="#4EAA25" fill-opacity="0.18" stroke="#4EAA25" stroke-width="0.7"/>
+  <text x="2250" y="37" text-anchor="middle" fill="#4EAA25" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">SH</text>
+  <text x="2250" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Bash</text>
+  <text x="2250" y="70" text-anchor="middle" fill="#4EAA25" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Scripting</text>
+
+  <!-- IAM x=2309 -->
+  <rect x="2309" y="8" width="82" height="70" rx="7" fill="#1A000A" stroke="#DD344C" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2309" y="8" width="82" height="2.5" rx="1.5" fill="#DD344C"/>
+  <circle cx="2350" cy="33" r="11" fill="#DD344C" fill-opacity="0.18" stroke="#DD344C" stroke-width="0.7"/>
+  <text x="2350" y="37" text-anchor="middle" fill="#DD344C" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">IAM</text>
+  <text x="2350" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">IAM</text>
+  <text x="2350" y="70" text-anchor="middle" fill="#DD344C" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Policies</text>
+
+  <!-- VCN x=2409 -->
+  <rect x="2409" y="8" width="82" height="70" rx="7" fill="#000A1A" stroke="#3399FF" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2409" y="8" width="82" height="2.5" rx="1.5" fill="#3399FF"/>
+  <circle cx="2450" cy="33" r="11" fill="#3399FF" fill-opacity="0.18" stroke="#3399FF" stroke-width="0.7"/>
+  <text x="2450" y="37" text-anchor="middle" fill="#3399FF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">VCN</text>
+  <text x="2450" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">VCN</text>
+  <text x="2450" y="70" text-anchor="middle" fill="#3399FF" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Networking</text>
+
+  <!-- DRG x=2509 -->
+  <rect x="2509" y="8" width="82" height="70" rx="7" fill="#001020" stroke="#44AAFF" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2509" y="8" width="82" height="2.5" rx="1.5" fill="#44AAFF"/>
+  <circle cx="2550" cy="33" r="11" fill="#44AAFF" fill-opacity="0.18" stroke="#44AAFF" stroke-width="0.7"/>
+  <text x="2550" y="37" text-anchor="middle" fill="#44AAFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">DRG</text>
+  <text x="2550" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">DRG</text>
+  <text x="2550" y="70" text-anchor="middle" fill="#44AAFF" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Routing</text>
+
+  <!-- RMAN x=2609 -->
+  <rect x="2609" y="8" width="82" height="70" rx="7" fill="#1A0800" stroke="#FF6B35" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2609" y="8" width="82" height="2.5" rx="1.5" fill="#FF6B35"/>
+  <circle cx="2650" cy="33" r="11" fill="#FF6B35" fill-opacity="0.18" stroke="#FF6B35" stroke-width="0.7"/>
+  <text x="2650" y="37" text-anchor="middle" fill="#FF6B35" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">RMAN</text>
+  <text x="2650" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">RMAN</text>
+  <text x="2650" y="70" text-anchor="middle" fill="#FF6B35" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">Backup</text>
+
+  <!-- Data Guard x=2709 -->
+  <rect x="2709" y="8" width="82" height="70" rx="7" fill="#001A18" stroke="#00C7B7" stroke-width="0.8" stroke-opacity="0.65"/>
+  <rect x="2709" y="8" width="82" height="2.5" rx="1.5" fill="#00C7B7"/>
+  <circle cx="2750" cy="33" r="11" fill="#00C7B7" fill-opacity="0.18" stroke="#00C7B7" stroke-width="0.7"/>
+  <text x="2750" y="37" text-anchor="middle" fill="#00C7B7" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">DG</text>
+  <text x="2750" y="57" text-anchor="middle" fill="#FFFFFF" font-size="7.5" font-weight="bold" font-family="Courier New,monospace">Data Guard</text>
+  <text x="2750" y="70" text-anchor="middle" fill="#00C7B7" font-size="5.5" font-family="Courier New,monospace" opacity="0.85">HA/DR</text>
+
+</g>
+
+<!-- Edge fade masks -->
+<rect x="0" y="0" width="80" height="90" fill="url(#fadeL)"/>
+<rect x="720" y="0" width="80" height="90" fill="url(#fadeR)"/>
+</svg>
