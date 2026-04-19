@@ -30,73 +30,16 @@ Let's connect and build something amazing together!</h3>**
 
  **<h3 align="left">Skills</h3>**
 
-<!-- Transparent box with animated logos and text -->
-<div style="border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(0, 0, 0, 0.25); border-radius: 16px; padding: 12px 20px; display: inline-block; width: auto; backdrop-filter: blur(2px);">
-  <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: left; font-family: system-ui, sans-serif; font-size: 16px; color: #e0eaff;">
-    
-    <!-- OCI -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite;">
-      <span>OCI</span>
-    </div>
-    <span>,</span>
-    
-    <!-- AWS -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.1s;">
-      <span>AWS</span>
-    </div>
-    <span>,</span>
-    
-    <!-- GCP -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlecloud.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.2s;">
-      <span>GCP</span>
-    </div>
-    <span>,</span>
-    
-    <!-- Terraform -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/terraform.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.3s;">
-      <span>Terraform</span>
-    </div>
-    <span>,</span>
-    
-    <!-- Github Actions -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/githubactions.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.4s;">
-      <span>Github Actions</span>
-    </div>
-    <span>,</span>
-    
-    <!-- Git -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.5s;">
-      <span>Git</span>
-    </div>
-    <span>,</span>
-    
-    <!-- Linux -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.6s;">
-      <span>Linux</span>
-    </div>
-    <span>,</span>
-    
-    <!-- Oracle Database -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.7s;">
-      <span>Oracle Database</span>
-    </div>
-    <span>,</span>
-    
-    <!-- Oracle Exadata -->
-    <div style="display: inline-flex; align-items: center; gap: 6px;">
-      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg" width="20" height="20" style="animation: bounce 1.2s ease infinite 0.8s;">
-      <span>Oracle Exadata</span>
-    </div>
-    
-  </div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px; justify-content: left;">
+  <img src="https://img.shields.io/badge/OCI-Cloud%20Infrastructure-F80000?logo=oracle&logoColor=white" height="28" alt="OCI">
+  <img src="https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazonaws&logoColor=white" height="28" alt="AWS">
+  <img src="https://img.shields.io/badge/GCP-Google%20Cloud-4285F4?logo=googlecloud&logoColor=white" height="28" alt="GCP">
+  <img src="https://img.shields.io/badge/Terraform-IaC-7B42BC?logo=terraform&logoColor=white" height="28" alt="Terraform">
+  <img src="https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=githubactions&logoColor=white" height="28" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white" height="28" alt="Git">
+  <img src="https://img.shields.io/badge/Linux-Admin-FCC624?logo=linux&logoColor=black" height="28" alt="Linux">
+  <img src="https://img.shields.io/badge/Oracle_DB-19c%20%26%20EBS-C74634?logo=oracle&logoColor=white" height="28" alt="Oracle Database">
+  <img src="https://img.shields.io/badge/Oracle_Exadata-X8M-FF0000?logo=oracle&logoColor=white" height="28" alt="Oracle Exadata">
 </div>
 
 <style>
@@ -121,6 +64,5 @@ Let's connect and build something amazing together!</h3>**
   <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs?username=Akash-yy&theme=react&hide_title=false&layout=compact&langs_count=6&hide_progress=false&card_width=400" alt="GitHub top-langs Card" />
   <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=Akash-yy&repo=Bubble&bg_color=35%2C2dd4bf%2C784BA0%2C2B86C5&show_owner=true&title_color=fff&text_color=fff&icon_color=fff" alt="GitHub repo-card Card" />
 </p>
-
 
 <p align="left"><a href="https://ko-fi.com/sushil_" target="_blank"><img src="https://img.shields.io/badge/Ko--fi-343B45?logo=kofi&logoColor=Black" height="36" style="margin-right: 4px"></a></p>
