@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./header.svg" width="100%" alt="Hi, my name is Akash"/>
+  <img src="./header.svg" width="30%" alt="Hi, my name is Akash"/>
   <br/>
   <img src="https://media.giphy.com/media/tYI1I24L6YdhRhf3BR/giphy.gif" width="180" height="160"/>
 </p>
