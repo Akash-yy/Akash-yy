@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./header.svg" width="30%" alt="Hi, my name is Akash"/><img src="https://media.giphy.com/media/tYI1I24L6YdhRhf3BR/giphy.gif" width="160" height="140"/>
+  <img src="./header.svg" width="51%" alt="Hi, my name is Akash"/><img src="https://media.giphy.com/media/tYI1I24L6YdhRhf3BR/giphy.gif" width="160" height="140"/>
 </p>
 <table>
   <tr>
