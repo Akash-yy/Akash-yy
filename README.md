@@ -9,7 +9,7 @@
         <br> <br>
         I’m a passionate Cloud Engineer and Database Engineer with nearly 3 years of experience crafting scalable, efficient, and resilient cloud infrastructures. 
         I thrive on solving complex problems and turning ideas into powerful cloud solutions. 
-        Whether it’s Cloud Engineering, DevOps, or Site Reliability Engineering (SRE), I’m always pushing the boundaries of what’s possible. 
+        I’m always pushing the boundaries of what’s possible. 
         <br> <br>
         Let’s connect and build something amazing together!
       </p>
@@ -28,7 +28,7 @@
 
 <h3 align="left">🚀 What I Bring to the Table</h3>
 
-- **Deep Cloud Expertise:** Skilled in OCI, Oracle Database, AWS, Github Actions and Terraform. I’m experienced in creating robust, automated solutions for scalable cloud infrastructure.
+- **Deep Cloud Expertise:** Skilled in OCI, Oracle Database, AWS, Github Actions, Terraform and Oracle database. I’m experienced in creating robust, automated solutions for scalable cloud infrastructure.
 - **Automation & Efficiency:** From CI/CD pipelines to Infrastructure as Code, I learning to optimizing workflows to improve efficiency and minimize downtime.
 - **Mentorship & Collaboration:** I thrive in team environments and enjoy sharing knowledge, mentoring, and working together to tackle complex challenges in cloud or elsewhere.
 
@@ -36,11 +36,12 @@
 
 <!--
 - 🔭 I’m currently working on [Terraform](https://github.com/nagarajurahul/Terraform)  and [CI-CD](https://github.com/nagarajurahul/CI-CD) 
--->
+
 
 - 🌱 I’m currently dicing deep to achieve expertise in **Automation, AI integration, Security**
 
 - 💬 Ask me about **Cloud**
+-->
 
 - 📫 How to reach me **https://www.linkedin.com/in/akash-yy/**
 
@@ -48,7 +49,7 @@
 
 <h3 align="left">🌐 Connect with Me</h3>
 
-I'm always open to discussing cloud engineering, DevOps, SRE,DBA and exciting tech innovations. Feel free to reach out!
+I'm always open to discussing cloud engineering and exciting tech innovations. Feel free to reach out!
 
 <p align="left">
 <a href="https://www.linkedin.com/in/akash-yy/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rahulnagaraju" height="30" width="40" /></a>
@@ -71,7 +72,7 @@ I'm always open to discussing cloud engineering, DevOps, SRE,DBA and exciting te
 </div>
 
 ---
-
+<!-- 
 ### 🌐 Skills at a Glance
 
 | Layer | Technologies |
@@ -85,6 +86,7 @@ I'm always open to discussing cloud engineering, DevOps, SRE,DBA and exciting te
 | 🐧 **OS & Tooling** | Linux (Admin + Shell Scripting) · Bash · PowerShell |
 
 ---
+-->
 
 <div align="center">
 
