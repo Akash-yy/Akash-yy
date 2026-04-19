@@ -1,10 +1,10 @@
-<p align="center">
-  <img src="./header.svg" width="51%" alt="Hi, my name is Akash"/><img src="https://media.giphy.com/media/tYI1I24L6YdhRhf3BR/giphy.gif" width="160" height="140"/>
-</p>
 <table>
   <tr>
     <td>
       <p align="left">
+        <p align="center">
+  <img src="./header.svg" width="51%" alt="Hi, my name is Akash"/><img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDFtdDA5dDd5eTFuOWpuYzc4eGZ2OGswbHN5Ymh3ZTcyNHQzY2liZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9dHM/DuNeivERgB3HLRd945/giphy.gif" width="100" height="100"/>
+</p>
         Welcome to my GitHub profile! 😃
         <br> <br>
         I'm a passionate Cloud Engineer and Database Admin with 2.9 YOE as of April 2026 crafting scalable, efficient, and resilient cloud infrastructures. 
@@ -25,58 +25,57 @@
 
 ---
 
-**<h3 align="left">Connect with me:</h3>**
-<p align="left">
-  <a href="https://github.com/Akash-yy" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?logo=github&logoColor=white" height="28" style="margin-right: 4px"></a>
-  <a href="https://www.linkedin.com/in/Akash-yy" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white" height="28" style="margin-right: 4px"></a>
+<strong>Connect with me on:</strong>
+<a href="https://www.linkedin.com/in/Akash-yy" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white" height="28" />
+</a>
 </p>
-
+<!--
 **<h2 align="left">More About Me:</h2>**
 <div style="display: flex; flex-direction: column; gap: 16px; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(0,0,0,0.3)); border-left: 4px solid #FF6B35; border-radius: 12px; padding: 16px 20px; backdrop-filter: blur(2px);">
-  
- <div style="background: rgba(13, 17, 23, 0.6); border-radius: 20px; padding: 20px 24px; margin: 24px 0; backdrop-filter: blur(4px); border: 1px solid rgba(255,107,53,0.2);">
-  
-  <!-- Single Heading -->
-  <h3 style="display: flex; align-items: center; gap: 10px; color: #FF6B35; font-size: 1.4rem; margin: 0 0 20px 0; border-bottom: 2px solid rgba(255,107,53,0.3); padding-bottom: 8px;">
-    <span></span> Current Load
+  <div style="background: rgba(13, 17, 23, 0.6); border-radius: 20px; padding: 20px 24px; margin: 24px 0; backdrop-filter: blur(4px); border: 1px solid rgba(255,107,53,0.2);">
+   <!-- Single Heading -- <h3 style="display: flex; align-items: center; gap: 10px; color: #FF6B35; font-size: 1.4rem; margin: 0 0 20px 0; border-bottom: 2px solid rgba(255,107,53,0.3); padding-bottom: 8px;">  <span></span> Current Load
   </h3>
-  
-  <!-- Point 1 -->
+ <!-- Point 1 
   <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnkycmp6bXRiZ2NtdmwzczRtaWphOW43ZDB4bnM4YWt5cTB6Z3gzYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/453QsWPQj5bsQaqp8M/giphy.gif" width="32" height="32" style="border-radius: 8px;">
     <span style="font-size: 15px; color: #c9d1d9;"><strong style="color: #FF6B35;">Fixing</strong> On-Premise to OCI network issues</span>
   </div>
   
-  <!-- Point 2 -->
+  <!-- Point 2 -
   <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXM0d2xrcjNkYzZ0YXI5cnQ0dW9lNW9pcnhudDE2cjRpYXFjZDU5biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/snEeOh54kCFxe/giphy.gif" width="32" height="32" style="border-radius: 8px;">
     <span style="font-size: 15px; color: #c9d1d9;"><strong style="color: #FF6B35;">Migrating</strong> 300TB+ combined size 22 Databases to OCI Exadata@GCP</span>
   </div>
   
-  <!-- Point 3 -->
+  <!-- Point 3 -
   <div style="display: flex; align-items: center; gap: 14px;">
     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmloY3hsMWxlbWN5N2syaWVtM3dvcWVkcmo3djBwcmF6ZWFoNG5rZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HtYsYjPsw1nVu/giphy.gif" width="32" height="32" style="border-radius: 8px;">
     <span style="font-size: 15px; color: #c9d1d9;"><strong style="color: #FF6B35;">Automating</strong> Terraform using GitHub Actions</span>
-  </div>
+  </div> -->
 
   <h3 style="display: flex; align-items: center; gap: 10px; color: #FF6B35; font-size: 1.4rem; margin: 0 0 20px 0; border-bottom: 2px solid rgba(255,107,53,0.3); padding-bottom: 8px;">
-    <span></span> More About my work -
+    <span></span> My works:
   </h3>
   
 </div>
   <div style="display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px;">
     <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXlidGZmYmVpZWY5aGp0ZjVvaTR6ajhnMTJhemxlaTBha2k5bHZsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VeT5jhseHD0W3dI7de/giphy.gif" width="40" height="40" style="border-radius: 8px; display: block;">
-    <span><strong>Blogs:</strong> <a href="https://medium.com/@akash-yy" target="_blank" style="color: #FF6B35; text-decoration: none; border-bottom: 1px dotted #FF6B35;">medium.com/@akash-yy</a></span>
+    <span>
+    <strong>Blogs</strong>
+    <a href="https://medium.com/@akash-yy">
+      <img src="https://img.shields.io/badge/View-Blog-green" />
+    </a>
+  </span>
   </div>
   <div style="display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px;">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZraW1jc2c5MTB6ejhzYWZ2NXdqN3NxMDdmemthbHowYmIzbGNwMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bGgsc5mWoryfgKBx1u/giphy.gif" width="40" height="40" style="border-radius: 8px; display: block;">
   
   <span>
-    <strong>My All Terraform Code and Repo Details</strong>
-    (Terraform-Hub —
+    <strong>All Terraform Code</strong>
     <a href="https://github.com/Akash-yy/Terraform-Hub">
-      <img src="https://img.shields.io/badge/View-Repository-blue" />
-    </a>)
+      <img src="https://img.shields.io/badge/View-Repo_Hub-cyan" />
+    </a>
   </span>
 </div>
   
