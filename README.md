@@ -42,17 +42,6 @@ Let's connect and build something amazing together!</h3>**
   <img src="https://img.shields.io/badge/Oracle_Exadata-X8M-FF0000?logo=oracle&logoColor=white" height="28" alt="Oracle Exadata">
 </div>
 
-<style>
-  @keyframes bounce {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-4px) rotate(2deg); }
-  }
-  div[style*="inline-flex"]:hover img {
-    filter: drop-shadow(0 0 3px #FF6B35);
-    transition: filter 0.2s;
-  }
-</style>
-
  **<h3 align="left">GitHub Stats</h3>**
 
 <p align="left">
