@@ -7,7 +7,7 @@
       <p align="left">
         Welcome to my GitHub profile! 😃
         <br> <br>
-        I'm a passionate Cloud Engineer and Database Admin with 2.9 as of April 2026 years of experience crafting scalable, efficient, and resilient cloud infrastructures. 
+        I'm a passionate Cloud Engineer and Database Admin with 2.9 YOE as of April 2026 years of experience crafting scalable, efficient, and resilient cloud infrastructures. 
         I thrive on solving complex problems and turning ideas into powerful cloud solutions. 
           Whether it's Cloud Engineering or Databases, I'm always pushing the boundaries of what's possible. 
         <br> <br>
@@ -31,23 +31,42 @@
   <a href="https://www.linkedin.com/in/Akash-yy" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin&logoColor=white" height="28" style="margin-right: 4px"></a>
 </p>
 
-**<h3 align="left">More...</h3>**
-
+**<h2 align="left">More About Me:</h2>**
 <div style="display: flex; flex-direction: column; gap: 16px; background: linear-gradient(135deg, rgba(255,107,53,0.1), rgba(0,0,0,0.3)); border-left: 4px solid #FF6B35; border-radius: 12px; padding: 16px 20px; backdrop-filter: blur(2px);">
   
-  <div style="display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px;">
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnNvZHpqcTZqZ215YzQ1aDFoNGxncWlyZzhkYWZ2M3d5a3B5Z2ZvZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13GIgrGdslD9oQ/giphy.gif" width="40" height="40" style="border-radius: 8px; display: block;">
-    <span><strong>Currently working on:</strong> OCI Hub & Spoke Deployment and 300TB+ Database migration to OCI Exadata@GCP</span>
+ <div style="background: rgba(13, 17, 23, 0.6); border-radius: 20px; padding: 20px 24px; margin: 24px 0; backdrop-filter: blur(4px); border: 1px solid rgba(255,107,53,0.2);">
+  
+  <!-- Single Heading -->
+  <h3 style="display: flex; align-items: center; gap: 10px; color: #FF6B35; font-size: 1.4rem; margin: 0 0 20px 0; border-bottom: 2px solid rgba(255,107,53,0.3); padding-bottom: 8px;">
+    <span></span> Current Load
+  </h3>
+  
+  <!-- Point 1 -->
+  <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnkycmp6bXRiZ2NtdmwzczRtaWphOW43ZDB4bnM4YWt5cTB6Z3gzYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/453QsWPQj5bsQaqp8M/giphy.gif" width="32" height="32" style="border-radius: 8px;">
+    <span style="font-size: 15px; color: #c9d1d9;"><strong style="color: #FF6B35;">Fixing</strong> On-Premise to OCI network issues</span>
   </div>
   
-  <div style="display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px;">
-    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjBjM25wdGw5NXJsNGNwdTdnejV0b2tnN2xmemN6cDNqZjFwems3eSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/kMqJ9CL7656fK/giphy.gif" width="40" height="40" style="border-radius: 8px; display: block;">
-    <span><strong>Currently learning:</strong> Terraform and GitHub Actions</span>
+  <!-- Point 2 -->
+  <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXM0d2xrcjNkYzZ0YXI5cnQ0dW9lNW9pcnhudDE2cjRpYXFjZDU5biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/snEeOh54kCFxe/giphy.gif" width="32" height="32" style="border-radius: 8px;">
+    <span style="font-size: 15px; color: #c9d1d9;"><strong style="color: #FF6B35;">Migrating</strong> 300TB+ combined size 22 Databases to OCI Exadata@GCP</span>
   </div>
   
+  <!-- Point 3 -->
+  <div style="display: flex; align-items: center; gap: 14px;">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmloY3hsMWxlbWN5N2syaWVtM3dvcWVkcmo3djBwcmF6ZWFoNG5rZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/HtYsYjPsw1nVu/giphy.gif" width="32" height="32" style="border-radius: 8px;">
+    <span style="font-size: 15px; color: #c9d1d9;"><strong style="color: #FF6B35;">Automating</strong> Terraform using GitHub Actions</span>
+  </div>
+
+  <h3 style="display: flex; align-items: center; gap: 10px; color: #FF6B35; font-size: 1.4rem; margin: 0 0 20px 0; border-bottom: 2px solid rgba(255,107,53,0.3); padding-bottom: 8px;">
+    <span></span> More About my work -
+  </h3>
+  
+</div>
   <div style="display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px;">
     <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXlidGZmYmVpZWY5aGp0ZjVvaTR6ajhnMTJhemxlaTBha2k5bHZsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VeT5jhseHD0W3dI7de/giphy.gif" width="40" height="40" style="border-radius: 8px; display: block;">
-    <span><strong>Blog:</strong> <a href="https://medium.com/@akash-yy" target="_blank" style="color: #FF6B35; text-decoration: none; border-bottom: 1px dotted #FF6B35;">medium.com/@akash-yy</a></span>
+    <span><strong>PLease vist my Blogs:</strong> <a href="https://medium.com/@akash-yy" target="_blank" style="color: #FF6B35; text-decoration: none; border-bottom: 1px dotted #FF6B35;">medium.com/@akash-yy</a></span>
   </div>
   
 </div>
