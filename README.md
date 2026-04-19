@@ -47,14 +47,6 @@
 
 ---
 
-<h3 align="left">🌐 Connect with Me</h3>
-
-I'm always open to discussing cloud engineering and exciting tech innovations. Feel free to reach out!
-
-<p align="left">
-<a href="https://www.linkedin.com/in/akash-yy/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rahulnagaraju" height="30" width="40" /></a>
----
-
 ---
 
 ### ⚡ Tech Stack
