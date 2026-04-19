@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="270" viewBox="0 0 800 270">
+<defs>
+  <pattern id="pdots" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="10" cy="10" r="0.5" fill="#111922"/>
+  </pattern>
+  <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FF9900" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#FF5733" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="accOrange" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0%" stop-color="#FF9900"/>
+    <stop offset="100%" stop-color="#A259FF"/>
+  </linearGradient>
+  <linearGradient id="accRed" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0%" stop-color="#FF3333"/>
+    <stop offset="100%" stop-color="#FF9900"/>
+  </linearGradient>
+  <filter id="pg" x="-10%" y="-10%" width="120%" height="120%">
+    <feGaussianBlur stdDeviation="8" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="800" height="270" fill="#0d1117"/>
+<rect width="800" height="270" fill="url(#pdots)"/>
+
+<!-- Header label -->
+<text x="400" y="34" text-anchor="middle" fill="#3A4A5C" font-size="9" font-family="Courier New,monospace" letter-spacing="4">⬡  RECENT WORKS  ⬡</text>
+
+<!-- Glow halos (behind cards) -->
+<ellipse cx="400" cy="155" rx="280" ry="60" fill="#FF5733" fill-opacity="0.04" filter="url(#pg)"/>
+
+<!-- CARD 1: AWS Multi-Zone -->
+<g opacity="1">
+  <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.42;0.5;0.92;1" dur="10s" repeatCount="indefinite"/>
+  
+      <rect x="20" y="50" width="760" height="200" rx="12" fill="#0A1628" fill-opacity="0.95" stroke="rgba(255,153,0,0.3)" stroke-width="1"/>
+      <rect x="20" y="50" width="760" height="200" rx="12" fill="url(#g1)"/>
+      <rect x="28" y="50" width="744" height="3" rx="1.5" fill="url(#accOrange)"/>
+      <text x="36" y="78" fill="#FF9900" font-size="9" font-family="Courier New,monospace" font-weight="bold">RECENT WORK  ·  01 / 02</text>
+      <text x="36" y="102" fill="white" font-size="16" font-weight="bold" font-family="Courier New,monospace">🌐  Multi-Zone AWS Architecture</text>
+      <rect x="294" y="108" width="1.5" height="70" fill="rgba(255,153,0,0.25)"/>
+      <text x="36" y="125" fill="#8B949E" font-size="8.5" font-family="Courier New,monospace">Fully Terraform-automated · GitHub Actions CI/CD · Zero-touch deployments</text>
+      <circle cx="304" cy="125" r="2.5" fill="#FF9900"/><text x="316" y="130" fill="#C9D1D9" font-size="8.5" font-family="Courier New,monospace">Auto-scaled EC2 across 3 AZs behind ALB</text><circle cx="304" cy="147" r="2.5" fill="#FF9900"/><text x="316" y="152" fill="#C9D1D9" font-size="8.5" font-family="Courier New,monospace">Private RDS with Multi-AZ failover + Secrets Mgr</text><circle cx="304" cy="169" r="2.5" fill="#FF9900"/><text x="316" y="174" fill="#C9D1D9" font-size="8.5" font-family="Courier New,monospace">Full IaC — zero console clicks, 100% reproducible</text>
+      <text x="310" y="128" fill="#C9D1D9" font-size="26" font-weight="bold" font-family="Courier New,monospace">3</text>
+      <text x="310" y="144" fill="#8B949E" font-size="8" font-family="Courier New,monospace">Availability Zones</text>
+      <text x="440" y="128" fill="#A259FF" font-size="26" font-weight="bold" font-family="Courier New,monospace">100%</text>
+      <text x="440" y="144" fill="#8B949E" font-size="8" font-family="Courier New,monospace">Infrastructure as Code</text>
+      <text x="610" y="128" fill="#00E5E5" font-size="26" font-weight="bold" font-family="Courier New,monospace">0</text>
+      <text x="610" y="144" fill="#8B949E" font-size="8" font-family="Courier New,monospace">Manual Console Steps</text>
+      <rect x="36" y="190" width="74" height="17" rx="8" fill="#A259FF" fill-opacity="0.2" stroke="#A259FF" stroke-width="0.8"/><text x="73" y="202" text-anchor="middle" fill="#A259FF" font-size="8" font-family="Courier New,monospace">Terraform</text><rect x="120" y="190" width="107" height="17" rx="8" fill="#2E8FFF" fill-opacity="0.2" stroke="#2E8FFF" stroke-width="0.8"/><text x="174" y="202" text-anchor="middle" fill="#2E8FFF" font-size="8" font-family="Courier New,monospace">GitHub Actions</text><rect x="230" y="190" width="114" height="17" rx="8" fill="#FF9900" fill-opacity="0.2" stroke="#FF9900" stroke-width="0.8"/><text x="287" y="202" text-anchor="middle" fill="#FF9900" font-size="8" font-family="Courier New,monospace">EC2 · VPC · RDS</text><rect x="338" y="190" width="68" height="17" rx="8" fill="#00E5E5" fill-opacity="0.2" stroke="#00E5E5" stroke-width="0.8"/><text x="372" y="202" text-anchor="middle" fill="#00E5E5" font-size="8" font-family="Courier New,monospace">Multi-AZ</text>
+      <text x="36" y="232" fill="#8B949E" font-size="7.5" font-family="Courier New,monospace" font-style="italic">Zero-touch provisioning. Full infra-as-code. CI/CD driven.</text>
+</g>
+
+<!-- CARD 2: Exadata Migration -->
+<g opacity="0">
+  <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.42;0.5;0.92;1" dur="10s" repeatCount="indefinite"/>
+  
+      <rect x="20" y="50" width="760" height="200" rx="12" fill="#0A0F1E" fill-opacity="0.95" stroke="rgba(255,87,51,0.3)" stroke-width="1"/>
+      <rect x="20" y="50" width="760" height="200" rx="12" fill="url(#g2)"/>
+      <rect x="28" y="50" width="744" height="3" rx="1.5" fill="url(#accRed)"/>
+      <text x="36" y="78" fill="#FF5733" font-size="9" font-family="Courier New,monospace" font-weight="bold">RECENT WORK  ·  02 / 02</text>
+      <text x="36" y="102" fill="white" font-size="16" font-weight="bold" font-family="Courier New,monospace">🚀  22 DB Migration → Exadata@GCP</text>
+      <rect x="294" y="108" width="1.5" height="70" fill="rgba(255,87,51,0.25)"/>
+      <text x="36" y="125" fill="#8B949E" font-size="8.5" font-family="Courier New,monospace">Oracle Exadata · OCI Multicloud Connectivity · DBA + Network + App teams</text>
+      <circle cx="304" cy="125" r="2.5" fill="#FF5733"/><text x="316" y="130" fill="#C9D1D9" font-size="8.5" font-family="Courier New,monospace">Migrated 22 on-prem databases to Exadata@GCP</text><circle cx="304" cy="147" r="2.5" fill="#FF5733"/><text x="316" y="152" fill="#C9D1D9" font-size="8.5" font-family="Courier New,monospace">Near-zero downtime cutover strategy across all 22 DBs</text><circle cx="304" cy="169" r="2.5" fill="#FF5733"/><text x="316" y="174" fill="#C9D1D9" font-size="8.5" font-family="Courier New,monospace">OCI multicloud bridge for hybrid-phase data continuity</text>
+      <text x="310" y="128" fill="#FF5733" font-size="26" font-weight="bold" font-family="Courier New,monospace">22</text>
+      <text x="310" y="144" fill="#8B949E" font-size="8" font-family="Courier New,monospace">Databases Migrated</text>
+      <text x="430" y="128" fill="#FF3333" font-size="26" font-weight="bold" font-family="Courier New,monospace">300TB+</text>
+      <text x="430" y="144" fill="#8B949E" font-size="8" font-family="Courier New,monospace">Combined Data Size</text>
+      <text x="610" y="128" fill="#00E5E5" font-size="26" font-weight="bold" font-family="Courier New,monospace">~0</text>
+      <text x="610" y="144" fill="#8B949E" font-size="8" font-family="Courier New,monospace">Downtime Cutover</text>
+      <rect x="36" y="190" width="107" height="17" rx="8" fill="#FF3333" fill-opacity="0.2" stroke="#FF3333" stroke-width="0.8"/><text x="90" y="202" text-anchor="middle" fill="#FF3333" font-size="8" font-family="Courier New,monospace">Oracle Exadata</text><rect x="150" y="190" width="107" height="17" rx="8" fill="#FF5733" fill-opacity="0.2" stroke="#FF5733" stroke-width="0.8"/><text x="204" y="202" text-anchor="middle" fill="#FF5733" font-size="8" font-family="Courier New,monospace">OCI Multicloud</text><rect x="256" y="190" width="114" height="17" rx="8" fill="#44AAFF" fill-opacity="0.2" stroke="#44AAFF" stroke-width="0.8"/><text x="313" y="202" text-anchor="middle" fill="#44AAFF" font-size="8" font-family="Courier New,monospace">GCP Integration</text><rect x="360" y="190" width="100" height="17" rx="8" fill="#00E5E5" fill-opacity="0.2" stroke="#00E5E5" stroke-width="0.8"/><text x="410" y="202" text-anchor="middle" fill="#00E5E5" font-size="8" font-family="Courier New,monospace">Zero Downtime</text>
+      <text x="36" y="232" fill="#8B949E" font-size="7.5" font-family="Courier New,monospace" font-style="italic">Enterprise-scale. Data-critical. Successfully delivered.</text>
+</g>
+</svg>
