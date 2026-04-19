@@ -1,0 +1,42 @@
+<svg fill="none" viewBox="0 0 820 160" width="820" height="160" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @keyframes gradientBG {
+          0%   { background-position: 0% 50%; }
+          50%  { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+        .container {
+          width: 820px;
+          height: 160px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 16px;
+          background: linear-gradient(-45deg, #0a0a0a, #1a0005, #0d0018, #00101a, #1a0800, #0a0a0a);
+          background-size: 500% 500%;
+          animation: gradientBG 10s ease infinite;
+          border: 1px solid #2a0a0a;
+        }
+        .text {
+          font-family: 'Courier New', monospace;
+          font-size: 48px;
+          font-weight: bold;
+          color: #d0d0d0;
+          text-align: center;
+          white-space: nowrap;
+          letter-spacing: 1px;
+        }
+        .name {
+          color: #ff3300;
+          text-shadow: 0 0 6px #ff0000, 0 0 18px #ff2200, 0 0 35px #cc0000;
+        }
+      </style>
+      <div class="container">
+        <div class="text">👋 Hi, my name is <span class="name">Akash</span></div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
