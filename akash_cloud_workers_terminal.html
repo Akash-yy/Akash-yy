@@ -1,0 +1,628 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#060a0f;}
+.wrap{font-family:'Courier New',monospace;background:#060a0f;border-radius:10px;overflow:hidden;border:1px solid #1e2a3a;}
+.topbar{background:#0d1520;border-bottom:1px solid #1e2a3a;padding:7px 14px;display:flex;align-items:center;gap:6px;}
+.dot{width:11px;height:11px;border-radius:50%;}.dot.r{background:#ff5f57;}.dot.y{background:#febc2e;}.dot.g{background:#28c840;}
+.tbar-title{font-size:11px;color:#3a5270;flex:1;text-align:center;letter-spacing:.5px;}
+.scene-area{background:#060a0f;height:260px;position:relative;overflow:hidden;border-bottom:1px solid #0d1520;}
+canvas#iso{width:100%;height:260px;display:block;}
+.term-body{padding:12px 16px 0;height:160px;overflow-y:auto;scroll-behavior:smooth;}
+.tl{line-height:1.8;font-size:11.5px;}
+.tc-prompt{color:#FF6B35;}.tc-cmd{color:#e0eaff;}.tc-out{color:#3a5270;}
+.tc-green{color:#3fb950;}.tc-blue{color:#58a6ff;}.tc-yellow{color:#d29922;}
+.tc-red{color:#f85149;}.tc-orange{color:#FF6B35;}.tc-cyan{color:#79c0ff;}
+.tc-pink{color:#f778ba;}.tc-dim{color:#1e2a3a;}.tc-white{color:#c9d1d9;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.cursor{display:inline-block;width:7px;height:12px;background:#FF6B35;vertical-align:middle;animation:blink 1s step-end infinite;margin-left:2px;}
+.btn-row{display:flex;gap:6px;padding:8px 14px;flex-wrap:wrap;background:#060a0f;border-top:1px solid #0d1520;}
+.qb{background:#0a0f18;border:1px solid #1e2a3a;color:#4a6280;font-size:10.5px;padding:5px 13px;border-radius:6px;cursor:pointer;font-family:'Courier New',monospace;transition:all .2s;}
+.qb:hover,.qb.active{border-color:#FF6B35;color:#FF6B35;background:#110800;}
+.inp-row{display:flex;align-items:center;gap:8px;padding:6px 14px 12px;background:#060a0f;}
+.inp-prompt{color:#FF6B35;font-size:12px;font-family:'Courier New',monospace;white-space:nowrap;}
+.inp{flex:1;background:#0a0f18;border:1px solid #1e2a3a;border-radius:5px;outline:none;color:#e0eaff;font-family:'Courier New',monospace;font-size:11.5px;caret-color:#FF6B35;padding:5px 10px;}
+.inp:focus{border-color:#FF6B35;}
+.flow-label{position:absolute;font-size:9px;font-family:'Courier New',monospace;color:#FF6B35;pointer-events:none;white-space:nowrap;background:#060a0f;padding:1px 4px;border-radius:3px;border:1px solid #FF6B35;opacity:0;transition:opacity .3s;}
+</style>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="tbar-title">akash@cloud-infra:~ — isometric control center — workers online</div>
+  </div>
+  <div class="scene-area">
+    <canvas id="iso"></canvas>
+  </div>
+  <div class="term-body" id="term">
+    <div class="tl"><span class="tc-green">✔</span> <span class="tc-blue">cloud workers online</span> — <span class="tc-orange">5 active</span> — infra nominal</div>
+    <div class="tl"><span class="tc-out">workers: VPC builder · IAM fixer · Pipeline deployer · TF writer · DB migrator</span></div>
+    <div class="tl"><span class="tc-out">type a command or click a shortcut below</span></div>
+    <div class="tl" style="margin-top:4px"><span class="tc-prompt">akash@cloud ➜ </span><span class="cursor"></span></div>
+  </div>
+  <div class="btn-row">
+    <button class="qb" onclick="runCmd('whoami')">whoami</button>
+    <button class="qb" onclick="runCmd('resume')">resume</button>
+    <button class="qb" onclick="runCmd('projects')">projects</button>
+    <button class="qb" onclick="runCmd('skills')">skills</button>
+    <button class="qb" onclick="runCmd('experience')">experience</button>
+    <button class="qb" onclick="runCmd('contact')">contact</button>
+    <button class="qb" onclick="runCmd('clear')">clear</button>
+  </div>
+  <div class="inp-row">
+    <span class="inp-prompt">akash@cloud ➜ </span>
+    <input class="inp" id="cmd-inp" type="text" placeholder="type a command..." autocomplete="off" onkeydown="handleKey(event)"/>
+  </div>
+</div>
+
+<script>
+const RESUME_URL = "";
+const LINKEDIN = "https://www.linkedin.com/in/akash-yy/";
+const GITHUB = "https://github.com/akash-yy";
+const PROJECTS = [
+  {name:"Exadata@GCP Migration",desc:"22 on-prem Oracle DBs → Exadata@GCP",stack:"Oracle Exadata X8M · GCP · RMAN · Data Guard",impact:"300TB+ migrated, ~0 downtime",url:""},
+  {name:"OCI Hub-and-Spoke Network",desc:"Enterprise multicloud connectivity fabric",stack:"VCN · DRG · FastConnect · Terraform",impact:"Full IaC, multi-region connectivity",url:""},
+  {name:"AWS Multi-Zone Infrastructure",desc:"Resilient multi-AZ architecture, full IaC",stack:"EC2 · VPC · RDS · IAM · GitHub Actions",impact:"Zero console clicks, automated pipelines",url:""}
+];
+
+const canvas = document.getElementById('iso');
+const ctx = canvas.getContext('2d');
+let W, H, animFrame, tick = 0, flowMode = 'idle', flowTick = 0, errorMode = false;
+
+function resize() {
+  const rect = canvas.parentElement.getBoundingClientRect();
+  W = canvas.width = rect.width;
+  H = canvas.height = 260;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// ISO helpers
+function iso(gx, gy, gz) {
+  const tx = (gx - gy) * 28;
+  const ty = (gx + gy) * 14 - gz * 22;
+  return { x: W/2 + tx - 80, y: H/2 + ty - 60 };
+}
+
+// Color palette
+const C = {
+  vpc:   '#185FA5', vpcL: '#378ADD', vpcD: '#0C447C',
+  iam:   '#3b6d11', iamL: '#7ee787', iamD: '#27500A',
+  cicd:  '#854F0B', cicdL: '#f0883e', cicdD: '#412402',
+  tf:    '#534AB7', tfL:  '#d2a8ff', tfD:  '#26215C',
+  db:    '#A32D2D', dbL:  '#ffa198', dbD:  '#501313',
+  fc:    '#0F6E56', fcL:  '#5DCAA5', fcD:  '#04342C',
+  drg:   '#854F0B', drgL: '#EF9F27', drgD: '#412402',
+  nat:   '#534AB7', natL: '#AFA9EC', natD: '#26215C',
+  fw:    '#A32D2D', fwL:  '#F09595', fwD:  '#501313',
+  floor: '#0a0e14',
+  grid:  '#0d1829',
+};
+
+// Iso block draw
+function drawBlock(gx, gy, gz, w, d, h, col, colL, colD, label, sublabel, workerIdx) {
+  const tl = iso(gx,     gy,     gz + h);
+  const tr = iso(gx + w, gy,     gz + h);
+  const br = iso(gx + w, gy + d, gz + h);
+  const bl = iso(gx,     gy + d, gz + h);
+  const ml = iso(gx,     gy,     gz);
+  const mr = iso(gx + w, gy,     gz);
+  const mbr= iso(gx + w, gy + d, gz);
+  const mbl= iso(gx,     gy + d, gz);
+
+  // Left face
+  ctx.beginPath(); ctx.moveTo(tl.x,tl.y); ctx.lineTo(ml.x,ml.y); ctx.lineTo(mbl.x,mbl.y); ctx.lineTo(bl.x,bl.y); ctx.closePath();
+  ctx.fillStyle = colD; ctx.fill();
+  ctx.strokeStyle = '#000'; ctx.lineWidth = 0.5; ctx.stroke();
+
+  // Right face
+  ctx.beginPath(); ctx.moveTo(tr.x,tr.y); ctx.lineTo(mr.x,mr.y); ctx.lineTo(mbr.x,mbr.y); ctx.lineTo(br.x,br.y); ctx.closePath();
+  ctx.fillStyle = col; ctx.fill(); ctx.strokeStyle = '#000'; ctx.lineWidth = 0.5; ctx.stroke();
+
+  // Top face
+  ctx.beginPath(); ctx.moveTo(tl.x,tl.y); ctx.lineTo(tr.x,tr.y); ctx.lineTo(br.x,br.y); ctx.lineTo(bl.x,bl.y); ctx.closePath();
+  ctx.fillStyle = colL; ctx.fill(); ctx.strokeStyle = '#000'; ctx.lineWidth = 0.5; ctx.stroke();
+
+  // Label on top
+  if(label) {
+    const cx = (tl.x+tr.x+br.x+bl.x)/4;
+    const cy = (tl.y+tr.y+br.y+bl.y)/4;
+    ctx.save();
+    ctx.font = 'bold 8px Courier New';
+    ctx.fillStyle = '#fff';
+    ctx.textAlign = 'center';
+    ctx.fillText(label, cx, cy);
+    if(sublabel) {
+      ctx.font = '6px Courier New';
+      ctx.fillStyle = 'rgba(255,255,255,0.6)';
+      ctx.fillText(sublabel, cx, cy + 9);
+    }
+    ctx.restore();
+  }
+}
+
+// Worker person draw (3D isometric stick figure)
+function drawWorker(cx, cy, color, action, t, scale) {
+  const sc = scale || 1;
+  const bob = Math.sin(t * 3) * 2 * sc;
+  const arm = Math.sin(t * 4) * 8 * sc;
+
+  ctx.save();
+  ctx.translate(cx, cy + bob);
+
+  // Shadow
+  ctx.beginPath(); ctx.ellipse(0, 8*sc, 7*sc, 3*sc, 0, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(0,0,0,0.3)'; ctx.fill();
+
+  // Body
+  ctx.beginPath(); ctx.roundRect(-4*sc, -10*sc, 8*sc, 12*sc, 2*sc);
+  ctx.fillStyle = color; ctx.fill();
+
+  // Head
+  ctx.beginPath(); ctx.arc(0, -14*sc, 5*sc, 0, Math.PI*2);
+  ctx.fillStyle = '#f5cba7'; ctx.fill();
+  ctx.strokeStyle = color; ctx.lineWidth = 1*sc; ctx.stroke();
+
+  // Hard hat
+  ctx.beginPath();
+  ctx.ellipse(0, -17*sc, 6*sc, 2*sc, 0, 0, Math.PI*2);
+  ctx.fillStyle = '#febc2e'; ctx.fill();
+  ctx.fillRect(-6*sc, -19*sc, 12*sc, 3*sc);
+
+  // Eyes
+  ctx.fillStyle = '#333';
+  ctx.fillRect(-2.5*sc, -15.5*sc, 1.5*sc, 1.5*sc);
+  ctx.fillRect(1*sc,   -15.5*sc, 1.5*sc, 1.5*sc);
+
+  // Left arm
+  ctx.save(); ctx.translate(-4*sc, -7*sc);
+  ctx.rotate((-0.4 + Math.sin(t*3)*0.3)*sc);
+  ctx.beginPath(); ctx.roundRect(-1.5*sc, 0, 3*sc, 9*sc, 1.5*sc);
+  ctx.fillStyle = color; ctx.fill();
+  ctx.restore();
+
+  // Right arm with tool
+  ctx.save(); ctx.translate(4*sc, -7*sc);
+  ctx.rotate((0.4 + arm/40)*sc);
+  ctx.beginPath(); ctx.roundRect(-1.5*sc, 0, 3*sc, 9*sc, 1.5*sc);
+  ctx.fillStyle = color; ctx.fill();
+  // Tool (wrench)
+  ctx.fillStyle = '#aaa';
+  ctx.fillRect(-1*sc, 9*sc, 2*sc, 6*sc);
+  ctx.restore();
+
+  // Legs
+  const lleg = Math.sin(t*3)*5*sc;
+  ctx.save(); ctx.translate(-2.5*sc, 2*sc);
+  ctx.rotate(lleg/30);
+  ctx.beginPath(); ctx.roundRect(-2*sc, 0, 4*sc, 9*sc, 2*sc);
+  ctx.fillStyle = '#1a2540'; ctx.fill();
+  ctx.restore();
+
+  ctx.save(); ctx.translate(2.5*sc, 2*sc);
+  ctx.rotate(-lleg/30);
+  ctx.beginPath(); ctx.roundRect(-2*sc, 0, 4*sc, 9*sc, 2*sc);
+  ctx.fillStyle = '#1a2540'; ctx.fill();
+  ctx.restore();
+
+  // Action label
+  if(action) {
+    ctx.font = '6px Courier New';
+    ctx.fillStyle = 'rgba(255,255,255,0.7)';
+    ctx.textAlign = 'center';
+    ctx.fillText(action, 0, 20*sc);
+  }
+
+  ctx.restore();
+}
+
+// Packet / data flow orb
+function drawPacket(x, y, color, size) {
+  ctx.beginPath(); ctx.arc(x, y, size||4, 0, Math.PI*2);
+  ctx.fillStyle = color; ctx.fill();
+  ctx.beginPath(); ctx.arc(x, y, (size||4)+2, 0, Math.PI*2);
+  ctx.strokeStyle = color; ctx.lineWidth = 0.8; ctx.globalAlpha=0.4; ctx.stroke(); ctx.globalAlpha=1;
+}
+
+// Flow connection line
+function drawFlowLine(x1,y1,x2,y2,color,progress,dashed) {
+  ctx.save();
+  ctx.strokeStyle = color; ctx.lineWidth = 1.5;
+  if(dashed) ctx.setLineDash([4,4]);
+  ctx.globalAlpha = 0.5;
+  ctx.beginPath(); ctx.moveTo(x1,y1);
+  const mx = x1+(x2-x1)*progress;
+  const my = y1+(y2-y1)*progress;
+  ctx.lineTo(mx,my); ctx.stroke();
+  ctx.globalAlpha = 1;
+  ctx.setLineDash([]);
+  ctx.restore();
+  if(progress > 0.05) drawPacket(mx, my, color, 3);
+}
+
+// Define blocks positions
+const blocks = [
+  {gx:0,   gy:0,   gz:0, w:1.8, d:1.2, h:0.5, key:'internet', col:'#185FA5',  colL:'#378ADD', colD:'#0C447C', label:'Internet',  sub:'client'},
+  {gx:2.2, gy:0,   gz:0, w:2,   d:1.2, h:0.6, key:'fc',       col:C.fc,       colL:C.fcL,     colD:C.fcD,     label:'FastConnect',sub:''},
+  {gx:4.5, gy:0,   gz:0, w:1.8, d:1.2, h:0.5, key:'iam',      col:C.iam,      colL:C.iamL,    colD:C.iamD,    label:'IAM',       sub:'policy'},
+  {gx:6.5, gy:0,   gz:0, w:1.8, d:1.2, h:0.5, key:'fw',       col:C.fw,       colL:C.fwL,     colD:C.fwD,     label:'Firewall',  sub:'NSG'},
+  {gx:8.5, gy:0,   gz:0, w:1.8, d:1.2, h:0.5, key:'drg',      col:C.drg,      colL:C.drgL,    colD:C.drgD,    label:'DRG',       sub:'routing'},
+  {gx:0,   gy:2.5, gz:0, w:1.8, d:1.4, h:0.5, key:'vpc',      col:C.vpc,      colL:C.vpcL,    colD:C.vpcD,    label:'VPC',       sub:'10.0.0.0/16'},
+  {gx:2.2, gy:2.5, gz:0, w:2,   d:1.4, h:0.7, key:'app',      col:'#0F6E56',  colL:'#3DCAA5', colD:'#04342C', label:'Application',sub:'server'},
+  {gx:4.5, gy:2.5, gz:0, w:1.8, d:1.4, h:0.5, key:'nat',      col:C.nat,      colL:C.natL,    colD:C.natD,    label:'NAT GW',    sub:'egress'},
+  {gx:6.5, gy:2.5, gz:0, w:1.8, d:1.4, h:0.6, key:'tf',       col:C.tf,       colL:C.tfL,     colD:C.tfD,     label:'Terraform', sub:'IaC'},
+  {gx:8.5, gy:2.5, gz:0, w:1.8, d:1.4, h:0.5, key:'db',       col:C.db,       colL:C.dbL,     colD:C.dbD,     label:'Exadata DB', sub:'Oracle'},
+];
+
+// Worker definitions
+const workerDefs = [
+  {blockKey:'vpc',  color:'#79c0ff', action:'building'},
+  {blockKey:'iam',  color:'#7ee787', action:'fixing'},
+  {blockKey:'app',  color:'#f0883e', action:'deploying'},
+  {blockKey:'tf',   color:'#d2a8ff', action:'writing tf'},
+  {blockKey:'db',   color:'#ffa198', action:'migrating'},
+];
+
+// Get block top-center screen position
+function blockTopCenter(b) {
+  const top = iso(b.gx + b.w/2, b.gy + b.d/2, b.gz + b.h);
+  return top;
+}
+
+// Flow stages: internet -> FC -> IAM -> FW -> DRG -> app -> nat (return)
+const flowStages = ['idle','sending','fc','iam','fw','drg','app','nat','done'];
+let flowProgress = 0, flowStage = 0;
+let flowActive = false;
+
+// Connection paths between block centers (screen)
+function getFlowPath() {
+  const get = key => {
+    const b = blocks.find(x=>x.key===key);
+    return blockTopCenter(b);
+  };
+  return [
+    {from:'internet',to:'fc',   color:'#58a6ff', label:'request'},
+    {from:'fc',      to:'iam',  color:'#7ee787', label:'route validated'},
+    {from:'iam',     to:'fw',   color:'#7ee787', label:'IAM ok'},
+    {from:'fw',      to:'drg',  color:'#f0883e', label:'fw passed'},
+    {from:'drg',     to:'app',  color:'#EF9F27', label:'routed'},
+    {from:'app',     to:'nat',  color:'#5DCAA5', label:'response'},
+    {from:'nat',     to:'internet', color:'#d2a8ff', label:'egress'},
+  ];
+}
+
+function lerp(a,b,t){return a+(b-a)*t;}
+
+let errorShake = 0, errorWorker = -1;
+
+function drawErrorWorker(cx, cy, t) {
+  ctx.save();
+  ctx.translate(cx + Math.sin(t*20)*4, cy);
+  const sc = 1;
+
+  ctx.beginPath(); ctx.ellipse(0, 8*sc, 7*sc, 3*sc, 0, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(0,0,0,0.3)'; ctx.fill();
+  ctx.beginPath(); ctx.roundRect(-4*sc, -10*sc, 8*sc, 12*sc, 2*sc);
+  ctx.fillStyle = '#f85149'; ctx.fill();
+  ctx.beginPath(); ctx.arc(0, -14*sc, 5*sc, 0, Math.PI*2);
+  ctx.fillStyle = '#f5cba7'; ctx.fill();
+  ctx.strokeStyle = '#f85149'; ctx.lineWidth = 1*sc; ctx.stroke();
+  ctx.beginPath(); ctx.ellipse(0, -17*sc, 6*sc, 2*sc, 0, 0, Math.PI*2);
+  ctx.fillStyle = '#f85149'; ctx.fill();
+  ctx.fillRect(-6*sc, -19*sc, 12*sc, 3*sc);
+  // Sweat drop
+  ctx.beginPath(); ctx.arc(7*sc, -16*sc, 2*sc, 0, Math.PI*2);
+  ctx.fillStyle = '#58a6ff'; ctx.fill();
+  // Hands up (apologize pose)
+  ctx.save(); ctx.translate(-4*sc,-7*sc); ctx.rotate(-1.2);
+  ctx.beginPath(); ctx.roundRect(-1.5*sc, 0, 3*sc, 9*sc, 1.5*sc);
+  ctx.fillStyle = '#f85149'; ctx.fill(); ctx.restore();
+  ctx.save(); ctx.translate(4*sc,-7*sc); ctx.rotate(1.2);
+  ctx.beginPath(); ctx.roundRect(-1.5*sc, 0, 3*sc, 9*sc, 1.5*sc);
+  ctx.fillStyle = '#f85149'; ctx.fill(); ctx.restore();
+  // Legs
+  ctx.save(); ctx.translate(-2.5*sc, 2*sc);
+  ctx.beginPath(); ctx.roundRect(-2*sc, 0, 4*sc, 9*sc, 2*sc);
+  ctx.fillStyle = '#1a2540'; ctx.fill(); ctx.restore();
+  ctx.save(); ctx.translate(2.5*sc, 2*sc);
+  ctx.beginPath(); ctx.roundRect(-2*sc, 0, 4*sc, 9*sc, 2*sc);
+  ctx.fillStyle = '#1a2540'; ctx.fill(); ctx.restore();
+
+  ctx.font = '6px Courier New'; ctx.fillStyle = '#f85149';
+  ctx.textAlign = 'center'; ctx.fillText('sorry!! paging Akash', 0, 22*sc);
+  ctx.restore();
+}
+
+// Main draw loop
+function draw() {
+  ctx.clearRect(0,0,W,H);
+
+  // Background grid
+  ctx.fillStyle = '#060a0f';
+  ctx.fillRect(0,0,W,H);
+
+  // Draw floor tiles
+  for(let gx=-1;gx<12;gx++) {
+    for(let gy=-1;gy<6;gy++) {
+      const a = iso(gx,gy,0), b=iso(gx+1,gy,0), c=iso(gx+1,gy+1,0), d=iso(gx,gy+1,0);
+      ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.lineTo(c.x,c.y); ctx.lineTo(d.x,d.y); ctx.closePath();
+      ctx.fillStyle = (gx+gy)%2===0?'#070c12':'#060a0f';
+      ctx.fill(); ctx.strokeStyle='#0d1520'; ctx.lineWidth=0.3; ctx.stroke();
+    }
+  }
+
+  // Draw blocks
+  blocks.forEach(b => {
+    drawBlock(b.gx, b.gy, b.gz, b.w, b.d, b.h, b.col, b.colL, b.colD, b.label, b.sub);
+  });
+
+  // Draw idle flow connections (faint dashed lines always)
+  const path = getFlowPath();
+  path.forEach(seg => {
+    const fb = blocks.find(x=>x.key===seg.from);
+    const tb = blocks.find(x=>x.key===seg.to);
+    if(!fb||!tb) return;
+    const fp = blockTopCenter(fb), tp = blockTopCenter(tb);
+    ctx.save(); ctx.strokeStyle='#1e2a3a'; ctx.lineWidth=1; ctx.setLineDash([3,5]);
+    ctx.globalAlpha=0.4;
+    ctx.beginPath(); ctx.moveTo(fp.x,fp.y); ctx.lineTo(tp.x,tp.y); ctx.stroke();
+    ctx.restore(); ctx.setLineDash([]);
+  });
+
+  // Active flow animation
+  if(flowActive && !errorMode) {
+    flowTick += 0.02;
+    const totalStages = path.length;
+    const globalT = flowTick % (totalStages + 1);
+    path.forEach((seg, i) => {
+      const fb = blocks.find(x=>x.key===seg.from);
+      const tb = blocks.find(x=>x.key===seg.to);
+      if(!fb||!tb) return;
+      const fp = blockTopCenter(fb), tp = blockTopCenter(tb);
+      const stageStart = i, stageEnd = i+1;
+      let prog = Math.max(0, Math.min(1, (globalT - stageStart)));
+      if(prog > 0) drawFlowLine(fp.x,fp.y,tp.x,tp.y,seg.color,prog,false);
+    });
+
+    // Pulse glow on active block
+    const activeStageIdx = Math.floor(flowTick % (path.length+1));
+    if(activeStageIdx < path.length) {
+      const activeSeg = path[activeStageIdx];
+      const ab = blocks.find(x=>x.key===activeSeg.to);
+      if(ab) {
+        const ap = blockTopCenter(ab);
+        ctx.save(); ctx.beginPath(); ctx.arc(ap.x,ap.y,12+Math.sin(tick)*3,0,Math.PI*2);
+        ctx.strokeStyle=activeSeg.color; ctx.lineWidth=1.5; ctx.globalAlpha=0.4+Math.sin(tick*2)*0.2;
+        ctx.stroke(); ctx.restore();
+      }
+    }
+  }
+
+  // Draw workers on their blocks
+  if(!errorMode) {
+    workerDefs.forEach((w, i) => {
+      const b = blocks.find(x=>x.key===w.blockKey);
+      if(!b) return;
+      const top = blockTopCenter(b);
+      drawWorker(top.x + (i%2===0?-8:8), top.y - 5, w.color, w.action, tick + i*1.3, 0.9);
+    });
+  } else {
+    // Error: all workers have hands up
+    workerDefs.forEach((w, i) => {
+      const b = blocks.find(x=>x.key===w.blockKey);
+      if(!b) return;
+      const top = blockTopCenter(b);
+      drawErrorWorker(top.x + (i%2===0?-8:8), top.y - 5, tick);
+    });
+    // Error sign floating
+    ctx.save();
+    const ex = W/2, ey = H/2 - 30 + Math.sin(tick*2)*4;
+    ctx.font = 'bold 11px Courier New'; ctx.fillStyle = '#f85149';
+    ctx.textAlign='center'; ctx.fillText('!! ERROR — contacting Akash !!', ex, ey);
+    ctx.restore();
+  }
+
+  // Resume flow packet label
+  if(flowActive && !errorMode) {
+    const activeStageIdx = Math.floor(flowTick % (path.length+1));
+    if(activeStageIdx < path.length) {
+      ctx.save(); ctx.font='7px Courier New'; ctx.fillStyle='#FF6B35';
+      ctx.textAlign='center';
+      const p = path[activeStageIdx];
+      const ab = blocks.find(x=>x.key===p.to);
+      if(ab) {
+        const ap = blockTopCenter(ab);
+        ctx.fillText(p.label, ap.x, ap.y - 22);
+      }
+      ctx.restore();
+    }
+  }
+
+  tick += 0.06;
+  animFrame = requestAnimationFrame(draw);
+}
+draw();
+
+// Terminal logic
+let hist = [], histIdx = -1;
+
+const RESUME_URL_VAL = RESUME_URL;
+
+function setFlow(mode) {
+  if(mode==='active') { flowActive=true; errorMode=false; flowTick=0; }
+  else if(mode==='error') { flowActive=false; errorMode=true; }
+  else { flowActive=false; errorMode=false; }
+}
+
+function appendLines(lines, delay) {
+  delay = delay||35;
+  const term = document.getElementById('term');
+  const cursorLine = term.querySelector('.cursor') ? term.querySelector('.cursor').closest('.tl') : null;
+  lines.forEach((l,i) => {
+    setTimeout(()=>{
+      const d=document.createElement('div'); d.className='tl';
+      d.innerHTML = l===''?'&nbsp;':l;
+      if(cursorLine) term.insertBefore(d,cursorLine); else term.appendChild(d);
+      term.scrollTop=term.scrollHeight;
+    }, i*delay);
+  });
+  setTimeout(()=>{ term.scrollTop=term.scrollHeight; }, lines.length*delay+80);
+  return lines.length*delay+100;
+}
+
+const cmds = {
+  help: ()=> appendLines([
+    '<span class="tc-yellow">available commands</span>',
+    '<span class="tc-cyan">whoami</span>      — identity brief',
+    '<span class="tc-cyan">resume</span>      — fetch resume (with flow animation)',
+    '<span class="tc-cyan">projects</span>    — infra projects + github links',
+    '<span class="tc-cyan">skills</span>      — full tech stack',
+    '<span class="tc-cyan">experience</span>  — work history',
+    '<span class="tc-cyan">contact</span>     — open a channel',
+    '<span class="tc-cyan">clear</span>       — clear terminal',
+    '<span class="tc-out">tip: ↑ recalls last command</span>'
+  ]),
+  whoami: ()=>{
+    setFlow('active');
+    return appendLines([
+      '<span class="tc-orange">╔══════════════════════════════════════╗</span>',
+      '<span class="tc-orange">║</span>  <span class="tc-green">AKASH</span> — Cloud & Database Engineer  <span class="tc-orange">║</span>',
+      '<span class="tc-orange">╚══════════════════════════════════════╝</span>',
+      '<span class="tc-blue">role     :</span> Cloud & DB Engineer (~3 yrs)',
+      '<span class="tc-blue">primary  :</span> OCI Hub-and-Spoke Architect',
+      '<span class="tc-blue">secondary:</span> AWS Multi-Zone, GCP Exadata',
+      '<span class="tc-blue">iac      :</span> Terraform — no console clicks, ever',
+      '<span class="tc-blue">motto    :</span> <span class="tc-out">Cloud is not the destination — it\'s the engine.</span>',
+      '<span class="tc-green">status   :</span> <span class="tc-green">✔ open to opportunities</span>',
+    ]);
+  },
+  resume: ()=>{
+    if(!RESUME_URL_VAL||RESUME_URL_VAL.trim()===''){
+      setFlow('error');
+      return appendLines([
+        '<span class="tc-red">!! ERROR 404 — resume.pdf not found on remote</span>',
+        '',
+        '<span class="tc-pink">worker[0]:</span> <span class="tc-out">"oh no... the link is missing! i\'m so sorry!!"</span>',
+        '<span class="tc-pink">worker[1]:</span> <span class="tc-out">"paging Akash immediately — please hold!!"</span>',
+        '<span class="tc-pink">worker[2]:</span> <span class="tc-out">"we\'re really really sorry... contacting him now 🙏"</span>',
+        '',
+        '<span class="tc-yellow">⚠  resume is under update — please reach out directly:</span>',
+        `<span class="tc-cyan">→ ${LINKEDIN}</span>`,
+        '<span class="tc-out">type <span class="tc-cyan">contact</span> for all channels.</span>',
+      ], 45);
+    } else {
+      setFlow('active');
+      return appendLines([
+        '<span class="tc-green">✔ initiating resume fetch — flow active above</span>',
+        '<span class="tc-out">request → FastConnect → IAM → Firewall → DRG → App...</span>',
+        `<span class="tc-cyan">→ ${RESUME_URL_VAL}</span>`,
+        '  <span class="tc-orange">★</span> 22 on-prem DBs → Exadata@GCP',
+        '  <span class="tc-orange">★</span> 300TB+ migrated, ~0 downtime',
+        '  <span class="tc-orange">★</span> OCI Hub-and-Spoke from scratch',
+        '  <span class="tc-orange">★</span> Full IaC: Terraform + GitHub Actions',
+      ]);
+    }
+  },
+  projects: ()=>{
+    setFlow('active');
+    const lines = ['<span class="tc-yellow">recent projects — akash-yy</span>',''];
+    PROJECTS.forEach((p,i)=>{
+      const hasUrl = p.url&&p.url.trim()!=='';
+      lines.push(`<span class="tc-orange">PROJECT ${String(i+1).padStart(3,'0')}:</span> <span class="tc-cyan">${p.name}</span>${hasUrl?` <a href="${p.url}" style="color:#79c0ff;font-size:10px">↗ github</a>`:'<span class="tc-dim"> [link coming soon]</span>'}`);
+      lines.push(`  <span class="tc-out">${p.desc}</span>`);
+      lines.push(`  <span class="tc-blue">stack :</span> <span class="tc-out">${p.stack}</span>`);
+      lines.push(`  <span class="tc-green">impact:</span> <span class="tc-out">${p.impact}</span>`);
+      lines.push('');
+    });
+    lines.push('<span class="tc-out">all projects: 100% code. zero console clicks.</span>');
+    return appendLines(lines);
+  },
+  skills: ()=>{
+    setFlow('active');
+    return appendLines([
+      '<span class="tc-yellow">skill tree — akash-yy</span>','',
+      '<span class="tc-blue">Cloud      :</span> <span class="tc-white">OCI · AWS · GCP</span>',
+      '<span class="tc-blue">IaC/CI/CD  :</span> <span class="tc-white">Terraform · GitHub Actions · Git</span>',
+      '<span class="tc-blue">Databases  :</span> <span class="tc-white">Oracle 19c · Exadata · OCI ATP · DBCS</span>',
+      '<span class="tc-blue">Networking :</span> <span class="tc-white">VCN · DRG · FastConnect · NSG</span>',
+      '<span class="tc-blue">Security   :</span> <span class="tc-white">IAM Policies · Vault · Least-Privilege</span>',
+      '<span class="tc-blue">OS/Tooling :</span> <span class="tc-white">Linux · Bash · PowerShell · RMAN · Data Guard</span>',
+      '','<span class="tc-green">all skills battle-tested in production.</span>',
+    ]);
+  },
+  experience: ()=>{
+    setFlow('active');
+    return appendLines([
+      '<span class="tc-yellow">work history — akash-yy</span>','',
+      '<span class="tc-orange">Cloud & Database Engineer</span> · ~3 years',
+      '<span class="tc-out">  enterprise infrastructure at scale</span>','',
+      '<span class="tc-blue">key achievements:</span>',
+      '  <span class="tc-green">✔</span> architected OCI Hub-and-Spoke topologies',
+      '  <span class="tc-green">✔</span> engineered AWS multi-zone deployments',
+      '  <span class="tc-green">✔</span> migrated 22 on-prem DBs → Exadata@GCP (300TB+)',
+      '  <span class="tc-green">✔</span> zero console clicks — pure Terraform IaC',
+      '  <span class="tc-green">✔</span> GitHub Actions for all infra deployments',
+      '  <span class="tc-green">✔</span> hybrid/multicloud connectivity design',
+      '','<span class="tc-out">type <span class="tc-cyan">resume</span> for resume link</span>',
+    ]);
+  },
+  contact: ()=>{
+    setFlow('active');
+    return appendLines([
+      '<span class="tc-yellow">establishing secure channel...</span>',
+      '<span class="tc-green">✔ channel open.</span>','',
+      `<span class="tc-blue">linkedin :</span> <a href="${LINKEDIN}" style="color:#79c0ff">${LINKEDIN}</a>`,
+      `<span class="tc-blue">github   :</span> <a href="${GITHUB}" style="color:#79c0ff">${GITHUB}</a>`,
+      '','<span class="tc-out">open to discussing cloud architecture, DB migrations,</span>',
+      '<span class="tc-out">DevOps, IaC best practices, and the next hard problem.</span>',
+      '','<span class="tc-green">looking forward to connecting.</span>',
+    ]);
+  },
+};
+
+function runCmd(raw) {
+  const input = raw.trim().toLowerCase();
+  if(!input) return;
+  hist.unshift(raw); histIdx=-1;
+  const term=document.getElementById('term');
+  const cursorLine=term.querySelector('.cursor')?term.querySelector('.cursor').closest('.tl'):null;
+  if(cursorLine) cursorLine.innerHTML='<span class="tc-prompt">akash@cloud ➜ </span><span class="tc-cmd">'+raw+'</span>';
+
+  document.querySelectorAll('.qb').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.qb').forEach(b=>{ if(b.textContent===raw.trim()) b.classList.add('active'); });
+  setTimeout(()=>document.querySelectorAll('.qb').forEach(b=>b.classList.remove('active')), 1200);
+
+  let wait=0;
+  if(input==='clear'){
+    setTimeout(()=>{
+      term.innerHTML='<div class="tl"><span class="tc-green">✔</span> <span class="tc-out">terminal cleared.</span></div><div class="tl"><span class="tc-prompt">akash@cloud ➜ </span><span class="cursor"></span></div>';
+      setFlow('idle');
+    },80);
+    document.getElementById('cmd-inp').value='';
+    return;
+  }
+  const fn=cmds[input];
+  if(fn){ wait=fn(); }
+  else {
+    setFlow('error');
+    wait=appendLines([
+      `<span class="tc-red">command not found: ${raw}</span>`,
+      '<span class="tc-pink">worker[0]: "uhh... i don\'t know that one... sorry!!"</span>',
+      '<span class="tc-pink">worker[1]: "we\'re contacting Akash for help right now!!"</span>',
+      '<span class="tc-out">try: <span class="tc-cyan">help</span></span>',
+    ], 40);
+    setTimeout(()=>setFlow('idle'), 4000);
+  }
+
+  const np=document.createElement('div'); np.className='tl';
+  np.innerHTML='<span class="tc-prompt">akash@cloud ➜ </span><span class="cursor"></span>';
+  setTimeout(()=>{ term.appendChild(np); term.scrollTop=term.scrollHeight; }, wait||400);
+  document.getElementById('cmd-inp').value='';
+}
+
+function handleKey(e){
+  if(e.key==='Enter'){ runCmd(document.getElementById('cmd-inp').value); }
+  else if(e.key==='ArrowUp'){ e.preventDefault(); if(histIdx<hist.length-1){histIdx++;document.getElementById('cmd-inp').value=hist[histIdx];} }
+  else if(e.key==='ArrowDown'){ e.preventDefault(); if(histIdx>0){histIdx--;document.getElementById('cmd-inp').value=hist[histIdx];}else{histIdx=-1;document.getElementById('cmd-inp').value='';} }
+}
+</script>
