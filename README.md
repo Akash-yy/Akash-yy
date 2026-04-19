@@ -66,8 +66,19 @@
 </div>
   <div style="display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px;">
     <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXlidGZmYmVpZWY5aGp0ZjVvaTR6ajhnMTJhemxlaTBha2k5bHZsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VeT5jhseHD0W3dI7de/giphy.gif" width="40" height="40" style="border-radius: 8px; display: block;">
-    <span><strong>PLease vist my Blogs:</strong> <a href="https://medium.com/@akash-yy" target="_blank" style="color: #FF6B35; text-decoration: none; border-bottom: 1px dotted #FF6B35;">medium.com/@akash-yy</a></span>
+    <span><strong>Blogs:</strong> <a href="https://medium.com/@akash-yy" target="_blank" style="color: #FF6B35; text-decoration: none; border-bottom: 1px dotted #FF6B35;">medium.com/@akash-yy</a></span>
   </div>
+  <div style="display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 12px;">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHZraW1jc2c5MTB6ejhzYWZ2NXdqN3NxMDdmemthbHowYmIzbGNwMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/bGgsc5mWoryfgKBx1u/giphy.gif" width="40" height="40" style="border-radius: 8px; display: block;">
+  
+  <span>
+    <strong>My All Terraform Code and Repo Details</strong>
+    (Terraform-Hub —
+    <a href="https://github.com/Akash-yy/Terraform-Hub">
+      <img src="https://img.shields.io/badge/View-Repository-blue" />
+    </a>)
+  </span>
+</div>
   
 </div>
 
