@@ -31,17 +31,62 @@ Let's connect and build something amazing together!</h3>**
  **<h3 align="left">Skills</h3>**
 
 <div style="display: flex; flex-wrap: wrap; gap: 4px; justify-content: left;">
-  <img src="https://img.shields.io/badge/OCI-Cloud%20Infrastructure-F80000?logo=oracle&logoColor=white" height="28" alt="OCI">
-  <img src="https://img.shields.io/badge/AWS-Cloud-FF9900?logo=amazonaws&logoColor=white" height="28" alt="AWS">
-  <img src="https://img.shields.io/badge/GCP-Google%20Cloud-4285F4?logo=googlecloud&logoColor=white" height="28" alt="GCP">
-  <img src="https://img.shields.io/badge/Terraform-IaC-7B42BC?logo=terraform&logoColor=white" height="28" alt="Terraform">
-  <img src="https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=githubactions&logoColor=white" height="28" alt="GitHub Actions">
-  <img src="https://img.shields.io/badge/Git-Version%20Control-F05032?logo=git&logoColor=white" height="28" alt="Git">
-  <img src="https://img.shields.io/badge/Linux-Admin-FCC624?logo=linux&logoColor=black" height="28" alt="Linux">
-  <img src="https://img.shields.io/badge/Oracle_DB-19c%20%26%20EBS-C74634?logo=oracle&logoColor=white" height="28" alt="Oracle Database">
-  <img src="https://img.shields.io/badge/Oracle_Exadata-X8M-FF0000?logo=oracle&logoColor=white" height="28" alt="Oracle Exadata">
+    
+    <!-- OCI -->
+   <div style="display: inline-flex; align-items: center; gap: 8px; background: #F80000; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">OCI</span>
+    </div>
+    
+    <!-- AWS -->
+   <div style="display: inline-flex; align-items: center; gap: 8px; background: #FF9900; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">AWS</span>
+    </div>
+    
+    <!-- GCP -->
+   <div style="display: inline-flex; align-items: center; gap: 8px; background: #4285F4; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/googlecloud.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">GCP</span>
+    </div>
+    
+    <!-- Terraform -->
+   <div style="display: inline-flex; align-items: center; gap: 8px; background: #7B42BC; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/terraform.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">Terraform</span>
+    </div>
+    
+    <!-- GitHub Actions -->
+   <div style="display: inline-flex; align-items: center; gap: 8px; background: #2088FF; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/githubactions.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">GitHub Actions</span>
+    </div>
+    
+    <!-- Git -->
+   <div style="display: inline-flex; align-items: center; gap: 8px; background: #F05032; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/git.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">Git</span>
+    </div>
+    
+    <!-- Linux -->
+  <div style="display: inline-flex; align-items: center; gap: 8px; background: #FCC624; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linux.svg" width="18" height="18" style="filter: brightness(0);">
+      <span style="color: #000; font-family: system-ui; font-size: 14px; font-weight: 500;">Linux</span>
+    </div>
+    
+    <!-- Oracle Database -->
+  <div style="display: inline-flex; align-items: center; gap: 8px; background: #C74634; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">Oracle Database</span>
+    </div>
+    
+    <!-- Oracle Exadata -->
+  <div style="display: inline-flex; align-items: center; gap: 8px; background: #C74634; padding: 6px 14px; border-radius: 40px;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/oracle.svg" width="18" height="18" style="filter: brightness(0) invert(1);">
+      <span style="color: white; font-family: system-ui; font-size: 14px; font-weight: 500;">Oracle Exadata</span>
+    </div>
+    
 </div>
-
  **<h3 align="left">GitHub Stats</h3>**
 
 <p align="left">
