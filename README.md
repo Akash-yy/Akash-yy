@@ -1,56 +1,58 @@
-<div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2800&pause=900&color=FF6B35&center=true&vCenter=true&width=750&lines=Hey+%F0%9F%91%8B+I'm+Akash+—+Cloud+%26+DB+Engineer;OCI+Hub+%26+Spoke+%7C+AWS+Multi-Zone+%7C+Terraform;300TB%2B+Migrated+to+Oracle+Exadata%40GCP+%F0%9F%9A%80;Building+Infrastructure+That+Scales+%7C+Heals+%7C+Stays+Secure)](https://git.io/typing-svg)
+<h1 align="left"> Hey there! I'm Akash 👋</h1>
 
-</div>
+<table>
+  <tr>
+    <td>
+      <p align="left">
+        Welcome to my GitHub profile! 😃
+        <br> <br>
+        I’m a passionate Cloud Engineer and Database Engineer with nearly 3 years of experience crafting scalable, efficient, and resilient cloud infrastructures. 
+        I thrive on solving complex problems and turning ideas into powerful cloud solutions. 
+        Whether it’s Cloud Engineering, DevOps, or Site Reliability Engineering (SRE), I’m always pushing the boundaries of what’s possible. 
+        <br> <br>
+        Let’s connect and build something amazing together!
+      </p>
+      <p align="left">
+        <img src="https://komarev.com/ghpvc/?username=rahulnagaraju724&label=Profile%20views&color=0e75b6&style=flat" alt="rahulnagaraju724" />
+      </p>
+    </td>
+    <td>
+      <img src="https://user-images.githubusercontent.com/74038190/235224431-e8c8c12e-6826-47f1-89fb-2ddad83b3abf.gif" width="300" align="right">
+    </td>
+  </tr>
+</table>
 
 ---
 
-<table>
-<tr>
-<td valign="middle" align="center" width="34%">
 
-<img src="https://user-images.githubusercontent.com/74038190/235224431-e8c8c12e-6826-47f1-89fb-2ddad83b3abf.gif" width="210"/>
+<h3 align="left">🚀 What I Bring to the Table</h3>
 
-<br/><br/>
+- **Deep Cloud Expertise:** Skilled in OCI, Oracle Database, AWS, Github Actions and Terraform. I’m experienced in creating robust, automated solutions for scalable cloud infrastructure.
+- **Automation & Efficiency:** From CI/CD pipelines to Infrastructure as Code, I learning to optimizing workflows to improve efficiency and minimize downtime.
+- **Mentorship & Collaboration:** I thrive in team environments and enjoy sharing knowledge, mentoring, and working together to tackle complex challenges in cloud or elsewhere.
 
-![Profile Views](https://komarev.com/ghpvc/?username=akash-yy&label=Profile+Views&color=FF6B35&style=for-the-badge)
+---
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-akash--yy-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akash-yy/)
+<!--
+- 🔭 I’m currently working on [Terraform](https://github.com/nagarajurahul/Terraform)  and [CI-CD](https://github.com/nagarajurahul/CI-CD) 
+-->
 
-</td>
-<td valign="top" width="66%">
+- 🌱 I’m currently dicing deep to achieve expertise in **Automation, AI integration, Security**
 
-### ☁️ About Me
+- 💬 Ask me about **Cloud**
 
-I'm **Akash** — a Cloud & Database Engineer with **~3 years** building enterprise-grade infrastructure at scale.
+- 📫 How to reach me **https://www.linkedin.com/in/akash-yy/**
 
-I architect **OCI Hub-and-Spoke topologies**, engineer **multi-zone AWS deployments**, and design the infrastructure backbone connecting hybrid/multicloud environments that run **300TB+ of business-critical data**. I define every resource with **Terraform** and ship with **GitHub Actions** — no console clicks, ever.
+---
 
-> *"Cloud is not the destination — it's the engine. I build the engine."*
+<h3 align="left">🌐 Connect with Me</h3>
 
-```yaml
-# akash-yy  ·  Cloud & DB Engineer
-experience : ~3 years
-focus      : Cloud Architecture (80%)
-             Database Engineering (20%)
+I'm always open to discussing cloud engineering, DevOps, SRE,DBA and exciting tech innovations. Feel free to reach out!
 
-cloud:
-  primary  : OCI (Hub & Spoke)
-  secondary: AWS, GCP (Multicloud)
-
-iac_cicd   : Terraform + GitHub Actions
-databases  : Oracle · Exadata · ATP · DBCS
-
-highlights:
-  - 22 on-prem DBs → Exadata@GCP
-  - 300TB+ migrated, ~0 downtime
-  - Multi-zone AWS with full IaC
-```
-
-</td>
-</tr>
-</table>
+<p align="left">
+<a href="https://www.linkedin.com/in/akash-yy/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rahulnagaraju" height="30" width="40" /></a>
+---
 
 ---
 
