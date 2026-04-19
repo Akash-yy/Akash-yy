@@ -14,7 +14,7 @@
         Let’s connect and build something amazing together!
       </p>
       <p align="left">
-        <img src="https://komarev.com/ghpvc/?username=rahulnagaraju724&label=Profile%20views&color=0e75b6&style=flat" alt="rahulnagaraju724" />
+        <img src="https://komarev.com/ghpvc/?username=Akash-yy&label=Profile%20views&color=0e75b6&style=flat" alt="Akash-yy" />
       </p>
     </td>
     <td>
