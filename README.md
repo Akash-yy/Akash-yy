@@ -54,7 +54,7 @@ highlights:
 
 ---
 
-### ⚡ Tech Arsenal — Live Stack
+### ⚡ Tech Stack
 
 <div align="center">
 <img src="skills-marquee.svg" width="800" alt="Tech Stack"/>
