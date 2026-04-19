@@ -17,7 +17,7 @@
           border-radius: 10px;
           background: linear-gradient(-45deg, #0a0a0a, #1a0005, #0d0018, #00101a, #1a0800, #0a0a0a);
           background-size: 500% 500%;
-          animation: gradientBG 10s ease infinite;
+          animation: gradientBG 1s ease infinite;
           border: 1px solid #2a0a0a;
         }
         .text {
