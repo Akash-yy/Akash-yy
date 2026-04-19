@@ -24,7 +24,6 @@
 
 ---
 
-
 <h3 align="left">🚀 What I Bring to the Table</h3>
 
 - **Deep Cloud Expertise:** Skilled in OCI, Oracle Database, AWS, Github Actions, Terraform and Oracle database. I'm experienced in creating robust, automated solutions for scalable cloud infrastructure.
@@ -43,35 +42,29 @@
 
 <div align="center">
 
-<!-- ══ Cloud Platforms ══ -->
 ![OCI](https://img.shields.io/badge/OCI-Hub_%26_Spoke-F04020?style=for-the-badge&logo=oracle&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-EC2·VPC·RDS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-Multicloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 
-<!-- ══ IaC & CI/CD ══ -->
 ![Terraform](https://img.shields.io/badge/Terraform-IaC_%26_Modules-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-Version_Control-F05032?style=for-the-badge&logo=git&logoColor=white)
 
-<!-- ══ Databases ══ -->
 ![Oracle DB](https://img.shields.io/badge/Oracle_DB-19c_%26_EBS-C74634?style=for-the-badge&logo=oracle&logoColor=white)
 ![Exadata](https://img.shields.io/badge/Exadata-%40GCP-FF3333?style=for-the-badge&logo=oracle&logoColor=white)
 ![OCI ATP](https://img.shields.io/badge/OCI_ATP-Autonomous-00A3E0?style=for-the-badge&logo=oracle&logoColor=white)
 ![DBCS](https://img.shields.io/badge/DBCS-Cloud_Svc-C74634?style=for-the-badge&logo=oracle&logoColor=white)
 
-<!-- ══ Networking & Security ══ -->
 ![VCN](https://img.shields.io/badge/VCN-Networking-3399FF?style=for-the-badge&logo=oracle&logoColor=white)
 ![DRG](https://img.shields.io/badge/DRG-Routing-44AAFF?style=for-the-badge&logo=oracle&logoColor=white)
 ![IAM](https://img.shields.io/badge/IAM-Policies-DD344C?style=for-the-badge&logo=oracle&logoColor=white)
 ![NSG](https://img.shields.io/badge/NSG-Sec_Groups-555555?style=for-the-badge&logo=oracle&logoColor=white)
 ![Vault](https://img.shields.io/badge/Vault-Secrets-000000?style=for-the-badge&logo=vault&logoColor=white)
 
-<!-- ══ OS & Tooling ══ -->
 ![Linux](https://img.shields.io/badge/Linux-Admin-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Bash](https://img.shields.io/badge/Bash-Scripting-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
 
-<!-- ══ DB Tools ══ -->
 ![RMAN](https://img.shields.io/badge/RMAN-Backup-FF6B35?style=for-the-badge&logo=oracle&logoColor=white)
 ![Data Guard](https://img.shields.io/badge/Data_Guard-HA%2FDR-00C7B7?style=for-the-badge&logo=oracle&logoColor=white)
 ![FastConnect](https://img.shields.io/badge/FastConnect-Multicloud-F04020?style=for-the-badge&logo=oracle&logoColor=white)
@@ -88,76 +81,46 @@
 
 ---
 
-### 🎮 Access My Resume — Terminal Mode
+### 🎮 Access My Resume — Isometric Cloud Terminal
 
-> **Hey Interviewer 👋** — drop into the cloud terminal below. Tiny infra workers are standing by. They're building VPCs, fixing IAM, deploying pipelines... and if something goes wrong, they'll personally page me.
+> **Hey Interviewer 👋** — tiny 3D workers are live above, actively building VPCs, fixing IAM, deploying pipelines, and migrating databases. Type a command and watch the whole flow light up — **Internet → FastConnect → IAM → Firewall → DRG → Application → NAT**. If something breaks, the workers apologize and page me personally.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  akash@cloud-infra:~ — secure terminal  —  clearance: GUEST    │
-│  [ VPC ] ──── [ IAM ] ──── [ CI/CD ] ──── [ Terraform ] ────  │
-│    👷          👷             👷               👷               │
-└─────────────────────────────────────────────────────────────────┘
-```
+**Commands:**
 
-**Commands available:**
-
-| Command | What it does |
+| Command | What happens |
 |---|---|
-| `whoami` | Identity brief — who is Akash |
-| `resume` | Fetch resume *(empty link → workers apologize & redirect to LinkedIn)* |
+| `whoami` | Identity brief + flow activates |
+| `resume` | Fetches resume *(empty = workers panic + error state)* |
 | `projects` | All infra projects with GitHub links |
-| `skills` | Full tech stack breakdown |
+| `skills` | Full tech stack |
 | `experience` | Work history & impact |
 | `contact` | Open a secure channel |
 
-> ⚙️ **To configure the terminal** — update the top constants in the embedded script:
+> ⚙️ **Configure before publishing** — edit the top of the `<script>` block:
 > ```js
-> const RESUME_URL = "https://your-resume-link-here.pdf"; // leave "" to trigger the friendly error
-> const PROJECTS   = [{ name:"...", url:"https://github.com/..." }]; // add real GitHub links
-> const SKILLS     = [{ cat:"Cloud", items:["OCI","AWS","GCP"] }];  // edit your stack
+> const RESUME_URL = "https://your-resume.pdf";         // "" triggers the friendly error scene
+> const PROJECTS   = [{ name:"...", url:"https://github.com/akash-yy/..." }];
 > ```
 
 <details>
-<summary><b>🖥️ Preview: what the terminal reveals</b></summary>
+<summary><b>📺 What the flow animation shows</b></summary>
 
-```bash
-akash@cloud ➜ resume
+When any command runs, the isometric scene activates a live data-flow:
 
-# — when RESUME_URL is set —
-✔ fetching resume package...
-→ https://your-resume-link.pdf
-  ★ 22 on-prem DBs → Exadata@GCP
-  ★ 300TB+ migrated, ~0 downtime
+```
+Internet ──► FastConnect ──► IAM Policy ──► Network Firewall
+                                                    │
+                                                    ▼
+              NAT Gateway ◄────── Application ◄── DRG Router
 
-# — when RESUME_URL is empty —
-!! ERROR 404 — resume package not found
-tiny worker: "oh no.. the resume link is empty!"
-tiny worker: "i'm so sorry... we're paging Akash right now!"
-tiny worker: "please don't leave, he'll fix it soon i promise"
-⚠ looks like the resume is under update.
-→ https://www.linkedin.com/in/akash-yy/
+Each hop lights up with a glowing packet as tiny 3D workers
+bob and work on their respective infrastructure components.
 
-─────────────────────────────────────
-
-akash@cloud ➜ projects
-
-PROJECT 001: Exadata@GCP Migration  ↗ github
-  22 on-prem Oracle DBs migrated to Exadata@GCP
-  stack : Oracle Exadata X8M · GCP · RMAN · Data Guard
-  impact: 300TB+ migrated, ~0 downtime
-
-PROJECT 002: OCI Hub-and-Spoke Network  ↗ github
-  Enterprise multicloud connectivity fabric
-  stack : VCN · DRG · FastConnect · Terraform
-
-─────────────────────────────────────
-
-akash@cloud ➜ unknown-command
-
-!! tiny worker: "uhhh... i don't know that command... sorry!!"
-!! tiny worker: "we're contacting Akash for help right now!"
-try: help for available commands
+On error (wrong command / empty resume link):
+→ All workers raise hands, shake, turn red
+→ "sorry!! paging Akash" labels appear
+→ Error banner floats across the scene
+→ Terminal shows apologetic worker dialogue
 ```
 
 </details>
