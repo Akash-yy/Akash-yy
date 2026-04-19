@@ -7,11 +7,12 @@
 </p>
         Welcome to my GitHub profile! 😃
         <br> <br>
-        I'm a passionate Cloud Engineer and Database Admin with 2.9 YOE as of April 2026 crafting scalable, efficient, and resilient cloud infrastructures. 
-        I thrive on solving complex problems and turning ideas into powerful cloud solutions. 
-          Whether it's Cloud Engineering or Databases, I'm always pushing the boundaries of what's possible. 
-        <br> <br>
-        Let's connect and build something amazing together!
+        I'm a Multi-Cloud Engineer focused on OCI & AWS infrastructure design. 
+      <br>Specializing in Hub and Spoke Model architecture, Multicloud Architecture, Database Migration to Oracle Cloud,multi-VPC architectures, cost governance, and production-ready cloud patterns.
+          Whether it's Cloud Engineering or Databases, I'm always pushing the boundaries of what's possible.</br>
+      <br>    </br>
+      <br> 📌 Focus: Building production-ready OCI/AWS infrastructure</br>
+      📫 <strong>Open to opportunities in Cloud / DevOps roles</strong>
       </p>
       <p align="left">
         <img src="https://komarev.com/ghpvc/?username=Akash-yy&label=Profile%20views&color=0e75b6&style=flat" alt="Akash-yy" />
