@@ -107,7 +107,8 @@
         </a>
       </td>
       <td align="center" style="padding: 8px;">
-        <img src="https://pixel-profile.vercel.app/api/github-stats?username=Akash-yy&hide=avatar,commits,contributions,issues,prs,stars&scale=0.8" alt="GitHub Rank Card" width="380" />
+        <img src="https://pixel-profile.vercel.app/api/github-stats?username=Akash-yy&scale=0.8" alt="GitHub Rank Card" width="380" />
+        <!-- <img src="https://pixel-profile.vercel.app/api/github-stats?username=Akash-yy&hide=avatar,commits,contributions,issues,prs,stars&scale=0.8" alt="GitHub Rank Card" width="380" /> -->
       </td>
     </tr>
   </table>
