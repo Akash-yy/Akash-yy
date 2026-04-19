@@ -1,5 +1,5 @@
 
-<h1 align="left"> Hey there! I'm Rahul Nagaraju 👋</h1>
+<h1 align="left"> Hey there! I'm Akash 👋</h1>
 
 <table>
   <tr>
@@ -7,7 +7,7 @@
       <p align="left">
         Welcome to my GitHub profile! 😃
         <br> <br>
-        I’m a passionate Cloud Engineer with nearly 5 years of experience crafting scalable, efficient, and resilient cloud infrastructures. 
+        I’m a passionate Cloud Engineer and Database Engineer with nearly 3 years of experience crafting scalable, efficient, and resilient cloud infrastructures. 
         I thrive on solving complex problems and turning ideas into powerful cloud solutions. 
         Whether it’s Cloud Engineering, DevOps, or Site Reliability Engineering (SRE), I’m always pushing the boundaries of what’s possible. 
         <br> <br>
@@ -28,36 +28,30 @@
 
 <h3 align="left">🚀 What I Bring to the Table</h3>
 
-- **Deep Cloud Expertise:** Skilled in AWS, Azure, Docker, Kubernetes, Terraform, Ansible and GitHub Actions. I’m experienced in creating robust, automated solutions for scalable cloud infrastructure.
-- **Automation & Efficiency:** From CI/CD pipelines to Infrastructure as Code, I love optimizing workflows to improve efficiency and minimize downtime.
+- **Deep Cloud Expertise:** Skilled in OCI, Oracle Database, AWS, Github Actions and Terraform. I’m experienced in creating robust, automated solutions for scalable cloud infrastructure.
+- **Automation & Efficiency:** From CI/CD pipelines to Infrastructure as Code, I learning to optimizing workflows to improve efficiency and minimize downtime.
 - **Mentorship & Collaboration:** I thrive in team environments and enjoy sharing knowledge, mentoring, and working together to tackle complex challenges in cloud or elsewhere.
 
 ---
 
 <!--
-- 🔭 I’m currently working on [GoFlights](https://github.com/nagarajurahul/GoFlights) 
+- 🔭 I’m currently working on [Terraform](https://github.com/nagarajurahul/Terraform)  and [CI-CD](https://github.com/nagarajurahul/CI-CD) 
 -->
 
-- 🔭 I’m currently working on [Terraform Multi-AZ VPC](https://github.com/nagarajurahul/terraform-aws-multi-az-vpc)
-- 🌱 I’m currently dicing deep to achieve expertise in **Azure, Kubernetes, Terraform**
+- 🌱 I’m currently dicing deep to achieve expertise in **Automation, AI integration, Security**
 
-- 👨‍💻 All of my projects are available at [https://nagarajurahul.github.io/portfolio/](https://nagarajurahul.github.io/portfolio/)
+- 💬 Ask me about **Cloud**
 
-- 💬 Ask me about **Cloud, Kubernetes, and Automation Tools**
-
-- 📫 How to reach me **nagarajurahul6@gmail.com**
+- 📫 How to reach me **https://www.linkedin.com/in/akash-yy/**
 
 ---
 
 <h3 align="left">🌐 Connect with Me</h3>
 
-I'm always open to discussing cloud engineering, DevOps, SRE, and exciting tech innovations. Feel free to reach out!
+I'm always open to discussing cloud engineering, DevOps, SRE,DBA and exciting tech innovations. Feel free to reach out!
 
 <p align="left">
-<a href="https://linkedin.com/in/rahulnagaraju" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rahulnagaraju" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/rahulnagaraju724" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="rahulnagaraju724" height="30" width="40" /></a>
-</p>
-
+<a href="https://www.linkedin.com/in/akash-yy/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rahulnagaraju" height="30" width="40" /></a>
 ---
 
 <h3 align="left">🛠 Technical Skills</h3>
