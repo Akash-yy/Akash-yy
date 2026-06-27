@@ -89,6 +89,9 @@
   <img src="https://img.shields.io/badge/AWS-FF9900?logo=amazonaws&logoColor=white" height="28" alt="AWS">
   <img src="https://img.shields.io/badge/GCP-4285F4?logo=googlecloud&logoColor=white" height="28" alt="GCP">
   <img src="https://img.shields.io/badge/Terraform-7B42BC?logo=terraform&logoColor=white" height="28" alt="Terraform">
+  <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white" height="28" alt="Docker">
+  <img src="https://img.shields.io/badge/Kubernetes-326CE5?logo=kubernetes&logoColor=white" height="28" alt="Kubernetes">
+  <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white" height="28" alt="GitHub">
   <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white" height="28" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" height="28" alt="Git">
   <img src="https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black" height="28" alt="Linux">
