@@ -99,20 +99,36 @@
   <img src="https://img.shields.io/badge/Oracle_Exadata-X11M-FF0000?logo=oracle&logoColor=white" height="28" alt="Oracle Exadata">
 </div>
 
-**<h3 align="left">GitHub Analytics</h3>**
+
+<h3 align="left">GitHub Analytics ✦</h3>
 
 <div align="center">
-  <table style="border: none; background: transparent;">
-    <tr>
-      <td align="center" style="padding: 8px;">
-        <a href="https://git.io/streak-stats">
-          <img src="https://streak-stats.demolab.com?user=Akash-yy&theme=dark&short_numbers=true&date_format=M%20j%5B%2C%20Y%5D&hide_border=true" alt="GitHub Streak" />
-        </a>
-      </td>
-      <td align="center" style="padding: 8px;">
-        <img src="https://pixel-profile.vercel.app/api/github-stats?username=Akash-yy&scale=0.8" alt="GitHub Rank Card" width="380" />
-        <!-- <img src="https://pixel-profile.vercel.app/api/github-stats?username=Akash-yy&hide=avatar,commits,contributions,issues,prs,stars&scale=0.8" alt="GitHub Rank Card" width="380" /> -->
-      </td>
-    </tr>
-  </table>
+
+  <img
+    src="twinkling-starfield.gif"
+    width="100%"
+    alt="Animated twinkling starfield"
+  />
+
+  <br/>
+
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=Akash-yy&show_icons=true&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=8B949E"
+    height="165"
+    alt="GitHub Statistics"
+  />
+
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Akash-yy&layout=compact&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=8B949E"
+    height="165"
+    alt="Top Languages"
+  />
+
+  <br/>
+
+  <img
+    src="https://streak-stats.demolab.com?user=Akash-yy&hide_border=true&background=00000000&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=8B949E&dates=8B949E"
+    alt="GitHub Contribution Streak"
+  />
+
 </div>
